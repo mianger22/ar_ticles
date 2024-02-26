@@ -1,4 +1,3 @@
-import '../../src/App.css';
 import CenterBlock from './CenterBlock/CenterBlock';
 import LeftBlock from './LeftBlock';
 import RightBlock from './RightBlock';
