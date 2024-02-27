@@ -1,64 +1,74 @@
 import Code from "../../Common/Code";
 
 const Codes = {
-    1: `<!DOCTYPE html>
-    <html lang="ru">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Our first AR application</title>
-    </head>
-    <body>
-        // Тут будет наш код
-    </body>
-    </html>`,
-    2: `<meta name="viewport" content="width=device-width, 
-    user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">`,
-    3: `<meta name="viewport" content="width=device-width, 
-    initial-scale=1.0">`,
-    4: `<!DOCTYPE html>
-    <html lang="ru">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Our first AR application</title>
-    </head>
-    <body>`,
-    5: `<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-        <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-        // Мы подключили библиотеку AR.js
-    </body>
-    </html>`,
-    6: `// Мы подключили библиотеку AR.js
-    </body>
-    </html>`,
-    7: `<a-scene embedded arjs>
-    <a-marker preset="hiro">
-        <a-text value="YA LUBLU TEBYA, MALISH :*" color="blue" scale="2 2 1"></a-text>
-    </a-marker>
-    <a-entity camera></a-entity>
-    </a-scene>`,
-    8: `<!DOCTYPE html>
+    1: `
+        <!DOCTYPE html>
         <html lang="ru">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-            <meta http-equiv="X-UA-Compatible" content="ie=edge">
-            <title>Our first AR application</title>
-        </head>
-        <body>
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+                <meta http-equiv="X-UA-Compatible" content="ie=edge">
+                <title>Our first AR application</title>
+            </head>
+            <body>
+                // Тут будет наш код
+            </body>
+        </html>
+    `,
+    2: `<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">`,
+    3: `<meta name="viewport" content="width=device-width, initial-scale=1.0">`,
+    4: `
+        <!DOCTYPE html>
+        <html lang="ru">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+                <meta http-equiv="X-UA-Compatible" content="ie=edge">
+                <title>Our first AR application</title>
+            </head>
+            <body>
+    `,
+    5: `
             <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
             <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-            <a-scene embedded arjs>
-                <a-marker preset="hiro">
-                    <a-text value="YA LUBLU TEBYA, MALISH :*" color="blue" scale="2 2 1"></a-text>
-                </a-marker>
-                <a-entity camera></a-entity>
-            </a-scene>
+            // Мы подключили библиотеку AR.js
         </body>
-        </html>`
+        </html>
+    `,
+    6: `
+                // Мы подключили библиотеку AR.js
+            </body>
+        </html>
+    `,
+    7: `
+        <a-scene embedded arjs>
+            <a-marker preset="hiro">
+                <a-text value="YA LUBLU TEBYA, MALISH :*" color="blue" scale="2 2 1"></a-text>
+            </a-marker>
+            <a-entity camera></a-entity>
+        </a-scene>
+    `,
+    8: `
+        <!DOCTYPE html>
+        <html lang="ru">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+                <meta http-equiv="X-UA-Compatible" content="ie=edge">
+                <title>Our first AR application</title>
+            </head>
+            <body>
+                <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+                <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+                <a-scene embedded arjs>
+                    <a-marker preset="hiro">
+                        <a-text value="YA LUBLU TEBYA, MALISH :*" color="blue" scale="2 2 1"></a-text>
+                    </a-marker>
+                    <a-entity camera></a-entity>
+                </a-scene>
+            </body>
+        </html>
+    `
 }
 
 function CenterBlock() {
@@ -76,9 +86,7 @@ function CenterBlock() {
 
                 1. Создаём стандартный html-файл. 
 
-                <div>
-                    <Code content={Codes[1]} />
-                </div>
+                <Code content={Codes[1]} />
                 
                 ! Внимание - мы пишем <Code content={Codes[2]} /> 
                 вместо <Code content={Codes[3]} /> для того, чтобы камера была без неприятного и неудобного увеличения
@@ -108,9 +116,8 @@ function CenterBlock() {
                 В итоге получилось следующий код нашего первого AR-приложения:
 
 копировать
-                <div>
-                    <Code content={Codes[8]} />
-                </div>
+                
+                <Code content={Codes[8]} />
 
                 4. Деплоим на гитхаб, меняем настройки, переходим по следующему адресу на созданный github pages c телефона, наводим на этот маркер
                 ожидаем, держа камеру так, чтобы картинка была параллельна

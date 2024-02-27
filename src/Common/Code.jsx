@@ -1,8 +1,8 @@
 function Code({ content }) {
     return (
-        <span className="bg-amber-400">
+        <div className="bg-amber-400" style={{whiteSpace: "pre-line"}}>
             {content}
-        </span>
+        </div>
     )
 }
 
