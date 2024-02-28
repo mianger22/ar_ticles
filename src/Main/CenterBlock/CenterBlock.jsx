@@ -2,8 +2,7 @@ import Code from "../../Common/Code";
 import BoldCode from "../../Common/BoldCode";
 
 const Codes = {
-    1: `
-        <!DOCTYPE html>
+    0: `<!DOCTYPE html>
         <html lang="ru">
             \u00a0\u00a0\u00a0<head>
             \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0<meta charset="UTF-8">
@@ -11,12 +10,8 @@ const Codes = {
             \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0<meta http-equiv="X-UA-Compatible" content="ie=edge">
             \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0<title>Our first AR application</title>
             \u00a0\u00a0\u00a0</head>
-            \u00a0\u00a0\u00a0<body>
-            \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0// Тут будет наш код
-            \u00a0\u00a0\u00a0</body>
-        </html>
-
-    `,
+            \u00a0\u00a0\u00a0<body>`,
+    1: `\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0// Тут будет наш код`,
     2: `
         <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 
@@ -25,38 +20,18 @@ const Codes = {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     `,
-    4: `
-        <!DOCTYPE html>
-        <html lang="ru">
-            \u00a0\u00a0\u00a0<head>
-            \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0<meta charset="UTF-8">
-            \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-            \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0<meta http-equiv="X-UA-Compatible" content="ie=edge">
-            \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0<title>Our first AR application</title>
-            \u00a0\u00a0\u00a0</head>
-            \u00a0\u00a0\u00a0<body>
-            
-    `,
-    5: `\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    4: `\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
         \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
         \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0// Мы подключили библиотеку AR.js`,
-    6: `
-        \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0// Тут будет наш код
-        \u00a0\u00a0\u00a0</body>
-        </html>
-
-    `,
-    7: `
-        \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0<a-scene embedded arjs>
+    5: `\u00a0\u00a0\u00a0</body>
+        </html>`,
+    6: `\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0<a-scene embedded arjs>
         \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0<a-marker preset="hiro">
         \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0<a-text value="YA LUBLU TEBYA, MALISH :*" color="blue" scale="2 2 1"></a-text>
         \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0</a-marker>
         \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0<a-entity camera></a-entity>
-        \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0</a-scene>
-
-    `,
-    8: `
-        <!DOCTYPE html>
+        \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0</a-scene>`,
+    7: `<!DOCTYPE html>
         <html lang="ru">
             \u00a0\u00a0\u00a0<head>
             \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0<meta charset="UTF-8">
@@ -66,22 +41,12 @@ const Codes = {
             \u00a0\u00a0\u00a0</head>
             \u00a0\u00a0\u00a0<body>
             \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-            \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-            \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0<a-scene embedded arjs>
-            \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0<a-marker preset="hiro">
-            \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0<a-text value="YA LUBLU TEBYA, MALISH :*" color="blue" scale="2 2 1"></a-text>
-            \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0</a-marker>
-            \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0<a-entity camera></a-entity>
-            \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0</a-scene> 
-            \u00a0\u00a0\u00a0</body>
-        </html>
-
-    `
+            \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>`
 }
 
 function CenterBlock() {
   return (
-    <div className="item2 col-span-5 border-2 border-gray-600 border-solid flex justify-center">
+    <div className="item2 col-span-5 flex justify-center">
         <div>
             <div className="flex items-center justify-center my-6">
                 <h1 className="text-xl font-bold">
@@ -94,48 +59,52 @@ function CenterBlock() {
             </div>
 
             <div>
-                <div className="mb-6">
+                <div className="italic flex items-center justify-center mb-6">
                     Всё просто.
                 </div>
 
                 <div className="mb-6">
-                    1. Создаём стандартный html-файл. 
-
-                    <Code content={Codes[1]} />
-
-                    ! Внимание - мы пишем <BoldCode content={Codes[2]} /> 
-                        вместо <BoldCode content={Codes[3]} /> для того, чтобы камера была без неприятного и неудобного увеличения
-                </div>
-
-                <div className="mb-6">
-                    2. Подключаем библиотеку AR.js, прописывая соответствующие теги в index.html в разделе body
+                    <div className="mb-6">1. Создаём стандартный html-файл.</div>
+                    <div className="mb-6 py-6 bg-amber-400">
+                        <Code content={Codes[0]} />
+                        <b><Code content={Codes[1]} /></b>
+                        <Code content={Codes[5]} />
+                    </div>
                     <div>
-                        <Code content={Codes[4]} />
-                        <span className="font-black">
-                            <Code content={Codes[5]} />
-                        </span>
-                        <Code content={Codes[6]} />
+                        <b>Attention!</b> Мы пишем <BoldCode content={Codes[2]} /> 
+                        вместо <BoldCode content={Codes[3]} /> для того, чтобы камера была без неприятного и неудобного увеличения
                     </div>
                 </div>
 
                 <div className="mb-6">
-                    3. Добавляем следующий код:
+                    <div className="mb-6">2. Подключаем библиотеку AR.js, прописывая соответствующие теги в index.html в разделе body:</div>
+                    <div className="py-6 bg-amber-400">
+                        <Code content={Codes[0]} />
+                        <b><Code content={Codes[4]} /></b>
+                        <Code content={Codes[5]} />
+                    </div>
+                </div>
+
+                <div className="mb-6">
+                    <div className="mb-6">3. Добавляем следующий код:</div>
                     
-                    <Code content={Codes[7]} />
+                    <div className="mb-6 bg-amber-400"><Code content={Codes[6]} /></div>
                     
-                    Что он делает?
+                    <div className="mb-6">Что он делает?</div>
 
-                    Во-первых, <b>a-scene</b> создаёт сцену
-                    Во-вторых, <b>a-marker</b> ищет маркер наведённой камерой. Его аттрибут <b>preset="hiro"</b> позволяет программе понять - какой маркер ей искать
-                    Всё, что внутри - выводит нужное нам содержимое над маркеромю. У нас это текст
+                    <div className="mb-3">Во-первых, <b>a-scene</b> создаёт сцену</div>
+                    <div className="mb-3">Во-вторых, <b>a-marker</b> ищет маркер наведённой камерой. Его аттрибут <b>preset="hiro"</b> позволяет программе понять - какой маркер ей искать
+                    Всё, что внутри - выводит нужное нам содержимое над маркеромю. У нас это текст</div>
 
-                    Внимание! Я испрорльзовал <b>a-text</b> вместо этого, для того чтобы текст был крупнее. Вы же можете использовать стандартный а-ембеддед
+                    <div className="mb-3">Внимание! Я использовал <b>a-text</b> вместо этого, для того чтобы текст был крупнее. Вы же можете использовать стандартный а-ембеддед</div>
 
-                    В итоге получилось следующий код нашего первого AR-приложения:
-
-                    копировать
+                    <div className="mb-6">В итоге получилось следующий код нашего первого AR-приложения:</div>
                     
-                    <Code content={Codes[8]} />
+                    <div className="py-6 bg-amber-400">
+                        <Code content={Codes[7]} />
+                        <Code content={Codes[6]} />
+                        <Code content={Codes[5]} />
+                    </div>
                 </div>
 
                 <div className="mb-6">
