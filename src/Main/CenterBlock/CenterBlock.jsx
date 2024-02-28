@@ -11,7 +11,10 @@ const Codes = {
             \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0<title>Our first AR application</title>
             \u00a0\u00a0\u00a0</head>
             \u00a0\u00a0\u00a0<body>`,
-    1: `\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0// Тут будет наш код`,
+    "comments": {
+        "code": `\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0// Тут будет наш код`,
+        "connect": `\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0// Мы подключили библиотеку AR.js`
+    },
     2: `
         <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 
@@ -21,8 +24,7 @@ const Codes = {
     
     `,
     4: `\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-        \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-        \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0// Мы подключили библиотеку AR.js`,
+        \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>`,
     5: `\u00a0\u00a0\u00a0</body>
         </html>`,
     6: `\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0<a-scene embedded arjs>
@@ -31,17 +33,6 @@ const Codes = {
         \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0</a-marker>
         \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0<a-entity camera></a-entity>
         \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0</a-scene>`,
-    7: `<!DOCTYPE html>
-        <html lang="ru">
-            \u00a0\u00a0\u00a0<head>
-            \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0<meta charset="UTF-8">
-            \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-            \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0<meta http-equiv="X-UA-Compatible" content="ie=edge">
-            \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0<title>Our first AR application</title>
-            \u00a0\u00a0\u00a0</head>
-            \u00a0\u00a0\u00a0<body>
-            \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-            \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>`
 }
 
 function CenterBlock() {
@@ -67,7 +58,7 @@ function CenterBlock() {
                     <div className="mb-6">1. Создаём стандартный html-файл.</div>
                     <div className="mb-6 py-6 bg-amber-400">
                         <Code content={Codes[0]} />
-                        <b><Code content={Codes[1]} /></b>
+                        <b><Code content={Codes.comments.code} /></b>
                         <Code content={Codes[5]} />
                     </div>
                     <div>
@@ -81,6 +72,7 @@ function CenterBlock() {
                     <div className="py-6 bg-amber-400">
                         <Code content={Codes[0]} />
                         <b><Code content={Codes[4]} /></b>
+                        <b><Code content={Codes.comments.connect} /></b>
                         <Code content={Codes[5]} />
                     </div>
                 </div>
@@ -101,7 +93,8 @@ function CenterBlock() {
                     <div className="mb-6">В итоге получилось следующий код нашего первого AR-приложения:</div>
                     
                     <div className="py-6 bg-amber-400">
-                        <Code content={Codes[7]} />
+                        <Code content={Codes[0]} />
+                        <Code content={Codes[4]} />
                         <Code content={Codes[6]} />
                         <Code content={Codes[5]} />
                     </div>
