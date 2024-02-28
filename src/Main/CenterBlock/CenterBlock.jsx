@@ -2,7 +2,7 @@ import Code from "../../Common/Code";
 import BoldCode from "../../Common/BoldCode";
 
 const Codes = {
-    0: `<!DOCTYPE html>
+    "head_code": `<!DOCTYPE html>
         <html lang="ru">
             \u00a0\u00a0\u00a0<head>
             \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0<meta charset="UTF-8">
@@ -15,19 +15,19 @@ const Codes = {
         "code": `\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0// Тут будет наш код`,
         "connect": `\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0// Мы подключили библиотеку AR.js`
     },
-    2: `
+    "correct_meta": `
         <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 
     `,
-    3: `
+    "uncorrect_meta": `
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     `,
-    4: `\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    "connect_AR": `\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
         \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>`,
-    5: `\u00a0\u00a0\u00a0</body>
+    "end_code": `\u00a0\u00a0\u00a0</body>
         </html>`,
-    6: `\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0<a-scene embedded arjs>
+    "body_AR": `\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0<a-scene embedded arjs>
         \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0<a-marker preset="hiro">
         \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0<a-text value="YA LUBLU TEBYA, MALISH :*" color="blue" scale="2 2 1"></a-text>
         \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0</a-marker>
@@ -57,30 +57,30 @@ function CenterBlock() {
                 <div className="mb-6">
                     <div className="mb-6">1. Создаём стандартный html-файл.</div>
                     <div className="mb-6 py-6 bg-amber-400">
-                        <Code content={Codes[0]} />
+                        <Code content={Codes.head_code} />
                         <b><Code content={Codes.comments.code} /></b>
-                        <Code content={Codes[5]} />
+                        <Code content={Codes.end_code} />
                     </div>
                     <div>
-                        <b>Attention!</b> Мы пишем <BoldCode content={Codes[2]} /> 
-                        вместо <BoldCode content={Codes[3]} /> для того, чтобы камера была без неприятного и неудобного увеличения
+                        <b>Attention!</b> Мы пишем <BoldCode content={Codes.correct_meta} /> 
+                        вместо <BoldCode content={Codes.uncorrect_meta} /> для того, чтобы камера была без неприятного и неудобного увеличения
                     </div>
                 </div>
 
                 <div className="mb-6">
                     <div className="mb-6">2. Подключаем библиотеку AR.js, прописывая соответствующие теги в index.html в разделе body:</div>
                     <div className="py-6 bg-amber-400">
-                        <Code content={Codes[0]} />
-                        <b><Code content={Codes[4]} /></b>
+                        <Code content={Codes.head_code} />
+                        <b><Code content={Codes.connect_AR} /></b>
                         <b><Code content={Codes.comments.connect} /></b>
-                        <Code content={Codes[5]} />
+                        <Code content={Codes.end_code} />
                     </div>
                 </div>
 
                 <div className="mb-6">
                     <div className="mb-6">3. Добавляем следующий код:</div>
                     
-                    <div className="mb-6 bg-amber-400"><Code content={Codes[6]} /></div>
+                    <div className="mb-6 bg-amber-400"><Code content={Codes.body_AR} /></div>
                     
                     <div className="mb-6">Что он делает?</div>
 
@@ -93,10 +93,10 @@ function CenterBlock() {
                     <div className="mb-6">В итоге получилось следующий код нашего первого AR-приложения:</div>
                     
                     <div className="py-6 bg-amber-400">
-                        <Code content={Codes[0]} />
-                        <Code content={Codes[4]} />
-                        <Code content={Codes[6]} />
-                        <Code content={Codes[5]} />
+                        <Code content={Codes.head_code} />
+                        <Code content={Codes.connect_AR} />
+                        <Code content={Codes.body_AR} />
+                        <Code content={Codes.end_code} />
                     </div>
                 </div>
 
