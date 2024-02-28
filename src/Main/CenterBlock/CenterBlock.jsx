@@ -1,22 +1,30 @@
 import Code from "../../Common/Code";
+import BoldCode from "../../Common/BoldCode";
 
 const Codes = {
     1: `
         <!DOCTYPE html>
         <html lang="ru">
-            \u0009<head>
-                <meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-                <meta http-equiv="X-UA-Compatible" content="ie=edge">
-                <title>Our first AR application</title>
-            </head>
-            <body>
-                // Тут будет наш код
-            </body>
+            \u00a0\u00a0\u00a0<head>
+            \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0<meta charset="UTF-8">
+            \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+            \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0<meta http-equiv="X-UA-Compatible" content="ie=edge">
+            \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0<title>Our first AR application</title>
+            \u00a0\u00a0\u00a0</head>
+            \u00a0\u00a0\u00a0<body>
+            \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0// Тут будет наш код
+            \u00a0\u00a0\u00a0</body>
         </html>
+
     `,
-    2: `<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">`,
-    3: `<meta name="viewport" content="width=device-width, initial-scale=1.0">`,
+    2: `
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+    `,
+    3: `
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    `,
     4: `
         <!DOCTYPE html>
         <html lang="ru">
@@ -72,27 +80,31 @@ function CenterBlock() {
   return (
     <div className="item2 col-span-5 border-2 border-gray-600 border-solid flex justify-center">
         <div>
-            <h1 className="text-3xl font-bold mb-6">
-                Создание первого AR-приложения с помощью AR.js
-            </h1>
+            <div className="flex items-center justify-center my-6">
+                <h1 className="text-xl font-bold">
+                    Создание первого AR-приложения с помощью AR.js
+                </h1>
+            </div>
+
             <div className="mb-6">
                 <img src="https://images.firstpost.com/wp-content/uploads/2019/02/Google-Maps-AR.jpg" alt="imagear" />
             </div>
+
             <div>
-                <div>
+                <div className="mb-6">
                     Всё просто.
                 </div>
 
-                <div>
+                <div className="mb-6">
                     1. Создаём стандартный html-файл. 
 
                     <Code content={Codes[1]} />
 
-                    ! Внимание - мы пишем <Code content={Codes[2]} /> 
-                        вместо <Code content={Codes[3]} /> для того, чтобы камера была без неприятного и неудобного увеличения
+                    ! Внимание - мы пишем <BoldCode content={Codes[2]} /> 
+                        вместо <BoldCode content={Codes[3]} /> для того, чтобы камера была без неприятного и неудобного увеличения
                 </div>
 
-                <div>
+                <div className="mb-6">
                     2. Подключаем библиотеку AR.js, прописывая соответствующие теги в index.html в разделе body
                     <div>
                         <Code content={Codes[4]} />
@@ -103,7 +115,7 @@ function CenterBlock() {
                     </div>
                 </div>
 
-                <div>
+                <div className="mb-6">
                     3. Добавляем следующий код
                     <div className="font-black">
                         <Code content={Codes[7]} />
