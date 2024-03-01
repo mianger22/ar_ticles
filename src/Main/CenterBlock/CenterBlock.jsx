@@ -14,7 +14,7 @@ const Codes = {
             \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0<meta charset="UTF-8">
             \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
             \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0<meta http-equiv="X-UA-Compatible" content="ie=edge">
-            \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0<title>Our first AR application</title>
+            \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0<title>My first AR application</title>
             \u00a0\u00a0\u00a0</head>
             \u00a0\u00a0\u00a0<body>`,
     "comments": {
@@ -94,7 +94,7 @@ function CenterBlock() {
                     <div className="mb-3">Во-вторых, <b>a-marker</b> ищет маркер наведённой камерой. Его аттрибут <b>preset="hiro"</b> позволяет программе понять - какой маркер ей искать
                     Всё, что внутри - выводит нужное нам содержимое над маркеромю. У нас это текст</div>
 
-                    <div className="mb-3">Внимание! Я использовал <b>a-text</b> вместо этого, для того чтобы текст был крупнее. Вы же можете использовать стандартный а-ембеддед</div>
+                    <div className="mb-3">Внимание! Я использовал <b>a-text</b> вместо <b><a-entity text="value: My first AR application"></a-entity></b>, для того чтобы текст был крупнее. Вы же можете использовать стандартный а-ембеддед</div>
 
                     <div className="mb-6">В итоге получилось следующий код нашего первого AR-приложения:</div>
                     
@@ -137,6 +137,13 @@ function CenterBlock() {
                         Вуаля! Наше приложение запущено! 
 
                         Теперь наводим камерой на следующий маркер (мы его указывали в коде командой ..)
+
+                        <div className="flex items-center justify-center my-6">
+                            <img 
+                                src="https://leonardo.osnova.io/af634cb0-038a-5245-8169-385adf3fb9ad/-/preview/1000/-/format/webp/" 
+                                alt="AR метка"
+                            />
+                        </div>                        
 
                         Наводим так, чтобы он весь уместился на экране и был как можно более параллелен смартфону.
 
