@@ -5,7 +5,7 @@ import RightBlock from './RightBlock';
 function Main() {
   return (
     // <main className="grid-container grid grid-cols-9 gap-2 h-screen" uk-grid>
-    <div className="uk-flex uk-grid-column-large" uk-grid>
+    <div className="uk-flex uk-grid-column-large uk-child-width-auto" uk-grid>
         <LeftBlock />
         <CenterBlock />
         <RightBlock />
