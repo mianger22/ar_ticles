@@ -50,7 +50,6 @@ const Codes = {
 
 function CenterBlock() {
   return (
-    // <div className="item2 col-span-5 flex justify-center">
     <div>
         <div className="flex items-center justify-center my-6">
             <h1 className="text-xl font-bold">
