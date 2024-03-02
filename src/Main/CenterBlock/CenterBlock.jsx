@@ -39,6 +39,10 @@ const Codes = {
         \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0</a-marker>
         \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0<a-entity camera></a-entity>
         \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0</a-scene>`,
+    "git_commands": 
+        `git add --all
+        git commit -m "my first commit"
+        git push`
 }
 
 function CenterBlock() {
@@ -66,6 +70,7 @@ function CenterBlock() {
                         <Code content={Codes.head_code} />
                         <b><Code content={Codes.comments.code} /></b>
                         <Code content={Codes.end_code} />
+                        <button onClick={() => {navigator.clipboard.writeText(Codes.head_code + Codes.comments.code + Codes.end_code)}}>copy</button>
                     </div>
                     <div>
                         <b>Attention!</b> Мы пишем <BoldCode content={Codes.correct_meta} /> 
@@ -80,6 +85,7 @@ function CenterBlock() {
                         <b><Code content={Codes.connect_AR} /></b>
                         <b><Code content={Codes.comments.connect} /></b>
                         <Code content={Codes.end_code} />
+                        <button onClick={() => {navigator.clipboard.writeText(Codes.head_code + Codes.connect_AR + Codes.comments.connect + Codes.end_code)}}>copy</button>
                     </div>
                 </div>
 
@@ -96,13 +102,14 @@ function CenterBlock() {
 
                     <div className="mb-3">Внимание! Я использовал <b>a-text</b> вместо <b><a-entity text="value: My first AR application"></a-entity></b>, для того чтобы текст был крупнее. Вы же можете использовать стандартный а-ембеддед</div>
 
-                    <div className="mb-6">В итоге получилось следующий код нашего первого AR-приложения:</div>
+                    <div className="mb-6">В итоге получился следующий код нашего первого AR-приложения:</div>
                     
                     <div className="py-6 bg-amber-400">
                         <Code content={Codes.head_code} />
                         <Code content={Codes.connect_AR} />
                         <Code content={Codes.body_AR} />
                         <Code content={Codes.end_code} />
+                        <button onClick={() => {navigator.clipboard.writeText(Codes.head_code + Codes.connect_AR + Codes.body_AR + Codes.end_code)}}>copy</button>
                     </div>
                 </div>
 
@@ -114,10 +121,72 @@ function CenterBlock() {
 
                     <div>
                         1. Создаём репозиторий на гитхабе
+
+                            Для этого переходим по ссылке <a href="https://github.com/new">https://github.com/new</a>
+
+                            Заполняем Repository name - название Вашего репозитория, ставим галочку на Add a readme file (она упростит клонирование репозитория)
+и нажимаем Create repository
+
+Ура! Вы создали пустой репозиторий для запуска Вашего AR-приложения.
+
+                            <div className="flex items-center justify-center my-6">
+                                <img 
+                                    src="../pictures/intro.jpeg" 
+                                    alt="Создание репозитория"
+                                />
+                            </div>  
+
                         2. Клонируем его на свой ПК 
-                        3. Инициализируем, чтобы пушить изменения
-                        4. Скидываем наш index.html в локальную папку, связанную с репозиторием на гитхабе
-                        5. Заливаем его следующей командой:
+
+                            Для этого формируем и переходим по ссылке https://github.com/ваш ник на гитхаб/название вашего репозитория
+
+                            Например, у меня доступ к репозиторию и следовательно к его клонированию получился https://github.com/mianger22/ar_dudar_lesson
+
+                            Перейдя по ссылке, мы попадаем на страницу репозитория.
+
+                            Жмем по зелёной кнопке Code и копируем значение из поля строки, кликнув по иконке сбоку
+                        
+                            <div className="flex items-center justify-center my-6">
+                                <img 
+                                    src="../pictures/intro2.jpeg" 
+                                    alt="Создание репозитория"
+                                />
+                            </div>
+
+                        3. Теперь открываем диск С, ищем место, где будет лежать наш склонированный проект. 
+                        
+                        Перед этим нужно установить GIT, вдобавок к нему можете скачать Git Bush (удобный инструмент для работы с GIT)
+Если решили пользоваться данной программой, то когда её установите, кликаете в выбранном месте правой кнопкой, выбираете open git bash here, запускаете
+
+                        Если же нет, то надо открыть командную строку. Объяснять не буду, загуглите. 
+
+                        В общем, при любом решении у Вас откроется терминал. 
+
+                        Туда пишите git clone и нажимаете комбинацию Shift+Insert, чтобы вставилась скопированная строка с github`a, а затем - Enter
+
+                        <div className="flex items-center justify-center my-6">
+                                <img 
+                                    src="../pictures/gitclone.jpeg" 
+                                    alt="Создание репозитория"
+                                />
+                            </div>
+
+                        3. Теперь открываем склонированную папку и скидываем туда наш index.html. После - открываем git bash или командную строку, если уже закрыли, если нет, то вводим cd {"наименование склонированной папки"} и 
+
+                        и пишем и запускаем следующие команды по очереди: 
+
+                        <div className="py-6 bg-amber-400">
+                            <Code content={Codes.git_commands} />
+                            <button onClick={() => {navigator.clipboard.writeText(Codes.git_commands)}}>copy</button>
+                        </div>
+
+                        Что они делают?
+
+                        а) <b>git add --all</b> добавляет все изменения в отслеживаемые
+                        б) <b>git commit -m "my first commit</b> коммитит их
+                        в) <b>git push</b> отправляет (сохраняет) изменения (наш код) на gitnub 
+
+                        4. Заливаем его следующей командой:
                         
                         Ура! Наш код сохранён. И мы его не потеряем в случае утраты компьютера. Теперь запускаем наш проект, включив github pages
 
