@@ -1,8 +1,8 @@
 import Code from "../../Common/Code";
 import BoldCode from "../../Common/BoldCode";
-import { 
-    Article,
-} from 'uikit-react';
+// import { 
+//     Article,
+// } from 'uikit-react';
 
 // Что такое AR и для чего он нужен
 
@@ -50,7 +50,8 @@ const Codes = {
 
 function CenterBlock() {
   return (
-    <div className="item2 col-span-5 flex justify-center">
+    // <div className="item2 col-span-5 flex justify-center">
+    <div>
         <div className="flex items-center justify-center my-6">
             <h1 className="text-xl font-bold">
                 Создание первого AR-приложения с помощью AR.js
@@ -62,10 +63,8 @@ function CenterBlock() {
         <div className="italic flex items-center justify-center mb-6">
             Всё просто.
         </div>
-        <Article
-            lead="1. Создаём стандартный html-файл."
-        >
-            <p className="uk-text-lead"></p>
+        <article className="uk-article">
+            <p className="uk-text-lead">1. Создаём стандартный html-файл.</p>
             <p>
                 <div className="mb-6 py-6 bg-amber-400">
                     <Code content={Codes.head_code} />
@@ -79,9 +78,7 @@ function CenterBlock() {
                 <b>Attention!</b> Мы пишем <BoldCode content={Codes.correct_meta} /> 
                     вместо <BoldCode content={Codes.uncorrect_meta} /> для того, чтобы камера была без неприятного и неудобного увеличения
             </p>
-        </Article
-        
-        >
+        </article>
         <article className="uk-article">
             <p className="uk-text-lead">2. Подключаем библиотеку AR.js, прописывая соответствующие теги в index.html в разделе body:</p>
             <p>
