@@ -1,5 +1,8 @@
 import Code from "../../Common/Code";
 import BoldCode from "../../Common/BoldCode";
+import { 
+    Article,
+} from 'uikit-react';
 
 // Что такое AR и для чего он нужен
 
@@ -48,201 +51,209 @@ const Codes = {
 function CenterBlock() {
   return (
     <div className="item2 col-span-5 flex justify-center">
-        <div>
-            <div className="flex items-center justify-center my-6">
-                <h1 className="text-xl font-bold">
-                    Создание первого AR-приложения с помощью AR.js
-                </h1>
-            </div>
-
-            <div className="mb-6">
-                <img src="https://images.firstpost.com/wp-content/uploads/2019/02/Google-Maps-AR.jpg" alt="imagear" />
-            </div>
-
-            <div>
-                <div className="italic flex items-center justify-center mb-6">
-                    Всё просто.
-                </div>
-
-                <div className="mb-6">
-                    <div className="mb-6">1. Создаём стандартный html-файл.</div>
-                    <div className="mb-6 py-6 bg-amber-400">
-                        <Code content={Codes.head_code} />
-                        <b><Code content={Codes.comments.code} /></b>
-                        <Code content={Codes.end_code} />
-                        <button onClick={() => {navigator.clipboard.writeText(Codes.head_code + Codes.comments.code + Codes.end_code)}}>copy</button>
-                    </div>
-                    <div>
-                        <b>Attention!</b> Мы пишем <BoldCode content={Codes.correct_meta} /> 
-                        вместо <BoldCode content={Codes.uncorrect_meta} /> для того, чтобы камера была без неприятного и неудобного увеличения
-                    </div>
-                </div>
-
-                <div className="mb-6">
-                    <div className="mb-6">2. Подключаем библиотеку AR.js, прописывая соответствующие теги в index.html в разделе body:</div>
-                    <div className="py-6 bg-amber-400">
-                        <Code content={Codes.head_code} />
-                        <b><Code content={Codes.connect_AR} /></b>
-                        <b><Code content={Codes.comments.connect} /></b>
-                        <Code content={Codes.end_code} />
-                        <button onClick={() => {navigator.clipboard.writeText(Codes.head_code + Codes.connect_AR + Codes.comments.connect + Codes.end_code)}}>copy</button>
-                    </div>
-                </div>
-
-                <div className="mb-6">
-                    <div className="mb-6">3. Добавляем следующий код:</div>
-                    
-                    <div className="mb-6 bg-amber-400"><Code content={Codes.body_AR} /></div>
-                    
-                    <div className="mb-6">Что он делает?</div>
-
-                    <div className="mb-3">Во-первых, <b>a-scene</b> создаёт сцену</div>
-                    <div className="mb-3">Во-вторых, <b>a-marker</b> ищет маркер наведённой камерой. Его аттрибут <b>preset="hiro"</b> позволяет программе понять - какой маркер ей искать
-                    Всё, что внутри - выводит нужное нам содержимое над маркеромю. У нас это текст</div>
-
-                    <div className="mb-3">Внимание! Я использовал <b>a-text</b> вместо <b><a-entity text="value: My first AR application"></a-entity></b>, для того чтобы текст был крупнее. Вы же можете использовать стандартный а-ембеддед</div>
-
-                    <div className="mb-6">В итоге получился следующий код нашего первого AR-приложения:</div>
-                    
-                    <div className="py-6 bg-amber-400">
-                        <Code content={Codes.head_code} />
-                        <Code content={Codes.connect_AR} />
-                        <Code content={Codes.body_AR} />
-                        <Code content={Codes.end_code} />
-                        <button onClick={() => {navigator.clipboard.writeText(Codes.head_code + Codes.connect_AR + Codes.body_AR + Codes.end_code)}}>copy</button>
-                    </div>
-                </div>
-
-                <div className="mb-6">
-                    <div className="mb-3">
-                        4. Теперь деплоим на гитхаб, меняем настройки, переходим по следующему адресу на созданный github pages c телефона, наводим на этот маркер
-                        ожидаем, держа камеру так, чтобы картинка была параллельна. Как это сделать - в следующей статье.
-                    </div>
-
-                    <div>
-                        4.1. Создаём репозиторий на гитхабе
-
-                            Для этого переходим по ссылке <a href="https://github.com/new">https://github.com/new</a>
-
-                            Заполняем Repository name - название Вашего репозитория, ставим галочку на Add a readme file (она упростит клонирование репозитория)
-и нажимаем Create repository
-
-Ура! Вы создали пустой репозиторий для запуска Вашего AR-приложения.
-
-                            <div className="flex items-center justify-center my-6">
-                                <img 
-                                    src="../pictures/intro.jpeg" 
-                                    alt="Создание репозитория"
-                                />
-                            </div>  
-
-                        4.2. Клонируем его на свой ПК 
-
-                            Для этого формируем и переходим по ссылке https://github.com/ваш ник на гитхаб/название вашего репозитория
-
-                            Например, у меня доступ к репозиторию и следовательно к его клонированию получился https://github.com/mianger22/ar_dudar_lesson
-
-                            Перейдя по ссылке, мы попадаем на страницу репозитория.
-
-                            Жмем по зелёной кнопке Code и копируем значение из поля строки, кликнув по иконке сбоку
-                        
-                            <div className="flex items-center justify-center my-6">
-                                <img 
-                                    src="../pictures/intro2.jpeg" 
-                                    alt="Создание репозитория"
-                                />
-                            </div>
-
-                        4.3. Теперь открываем диск С, ищем место, где будет лежать наш склонированный проект. 
-                        
-                        Перед этим нужно установить GIT, вдобавок к нему можете скачать Git Bush (удобный инструмент для работы с GIT)
-Если решили пользоваться данной программой, то когда её установите, кликаете в выбранном месте правой кнопкой, выбираете open git bash here, запускаете
-
-                        Если же нет, то надо открыть командную строку. Объяснять не буду, загуглите. 
-
-                        В общем, при любом решении у Вас откроется терминал. 
-
-                        Туда пишите git clone и нажимаете комбинацию Shift+Insert, чтобы вставилась скопированная строка с github`a, а затем - Enter
-
-                        <div className="flex items-center justify-center my-6">
-                                <img 
-                                    src="../pictures/gitclone.jpeg" 
-                                    alt="Создание репозитория"
-                                />
-                            </div>
-
-                        4.4. Теперь открываем склонированную папку и скидываем туда наш index.html. После - открываем git bash или командную строку, если уже закрыли, если нет, то вводим cd {"наименование склонированной папки"} и 
-
-                        и пишем и запускаем следующие команды по очереди: 
-
-                        <div className="py-6 bg-amber-400">
-                            <Code content={Codes.git_commands} />
-                            <button onClick={() => {navigator.clipboard.writeText(Codes.git_commands)}}>copy</button>
-                        </div>
-
-                        <div>
-                            Что они делают?
-                            
-                            <div className="mb-6">
-                                а) <b>git add --all</b> добавляет все изменения в отслеживаемые
-                            </div>
-                            <div className="mb-6">
-                                б) <b>git commit -m "my first commit</b> коммитит их
-                            </div>
-                            <div className="mb-6">
-                                в) <b>git push</b> отправляет (сохраняет) изменения (наш код) на GitHub 
-                            </div>
-                        </div>
-
-                        Ура! Наш код сохранён. И мы его не потеряем в случае утраты компьютера. 
-                        
-                        4.5. Теперь запускаем наш проект, включив github pages
-
-                        Для этого: 
-
-                        4.5.1. Заходим в настройки проекта, как на скриншоте
-                        4.5.2. Далее мы включаем данную настройку, чтобы у нас запустился сервис
-
-                        Готово! 
-
-                        5. Теперь смотрим - заработало ли приложение.
-                        
-                        Для этого 
-                        
-                        5.1. создаём адрес в соответствие с шаблоном - - , где это - ваш ник на гитхаб, а это - имя репозитория
-
-                        Сохраняем данный адрес, заливаем его в мессенджер, используемый Вами. Например, в телеграмм. 
-
-                        5.2. Заходим с телефона по нему.
-
-                        Вуаля! <b>Наше приложение запущено!</b> тут анимация или смайл
-
-                        5.3. Теперь наводим камерой на следующий маркер (мы его указывали в коде командой ..)
-
-                        <div className="flex items-center justify-center my-6">
-                            <img 
-                                src="https://leonardo.osnova.io/af634cb0-038a-5245-8169-385adf3fb9ad/-/preview/1000/-/format/webp/" 
-                                alt="AR метка"
-                            />
-                        </div>                        
-
-                        Наводим так, чтобы он весь уместился на экране и был как можно более параллелен смартфону.
-
-                        Ждём, пока наша программа проанализирует. 
-
-                        В итоге у нас должен появиться текст ... как на фото ниже
-
-                        Если получилось, поздравляю Вас с первой AR - программой. 
-
-                        Очень просто. Верно?
-                    </div>
-
-                    <div>
-                        Можете протестировать мой результат прежде чем возиться со своим, или чтобы сравнить свой с моим
-                    </div>
-                </div>
-            </div>
+        <div className="flex items-center justify-center my-6">
+            <h1 className="text-xl font-bold">
+                Создание первого AR-приложения с помощью AR.js
+            </h1>
         </div>
+        <div className="mb-6">
+            <img src="https://images.firstpost.com/wp-content/uploads/2019/02/Google-Maps-AR.jpg" alt="imagear" />
+        </div>
+        <div className="italic flex items-center justify-center mb-6">
+            Всё просто.
+        </div>
+        <Article
+            lead="1. Создаём стандартный html-файл."
+        >
+            <p className="uk-text-lead"></p>
+            <p>
+                <div className="mb-6 py-6 bg-amber-400">
+                    <Code content={Codes.head_code} />
+                    <b><Code content={Codes.comments.code} /></b>
+                    <Code content={Codes.end_code} />
+
+                    <button onClick={() => {navigator.clipboard.writeText(Codes.head_code + Codes.comments.code + Codes.end_code)}}>copy</button>
+                </div>
+            </p>
+            <p>
+                <b>Attention!</b> Мы пишем <BoldCode content={Codes.correct_meta} /> 
+                    вместо <BoldCode content={Codes.uncorrect_meta} /> для того, чтобы камера была без неприятного и неудобного увеличения
+            </p>
+        </Article
+        
+        >
+        <article className="uk-article">
+            <p className="uk-text-lead">2. Подключаем библиотеку AR.js, прописывая соответствующие теги в index.html в разделе body:</p>
+            <p>
+                <div className="py-6 bg-amber-400">
+                    <Code content={Codes.head_code} />
+                    <b><Code content={Codes.connect_AR} /></b>
+                    <b><Code content={Codes.comments.connect} /></b>
+                    <Code content={Codes.end_code} />
+                    
+                    <button onClick={() => {navigator.clipboard.writeText(Codes.head_code + Codes.connect_AR + Codes.comments.connect + Codes.end_code)}}>copy</button>
+                </div>
+            </p>
+        </article>
+        <article className="uk-article">
+            <p className="uk-text-lead">3. Добавляем следующий код:</p>
+            <p>
+                <div className="mb-6 bg-amber-400">
+                    <Code content={Codes.body_AR} />
+                </div>
+            </p>
+            <p>
+                Что он делает?
+            </p>
+            <p>
+                Во-первых, <b>a-scene</b> создаёт сцену
+            </p>
+            <p>
+                Во-вторых, <b>a-marker</b> ищет маркер наведённой камерой. Его аттрибут <b>preset="hiro"</b> позволяет программе понять - какой маркер ей искать
+                Всё, что внутри - выводит нужное нам содержимое над маркеромю. У нас это текст
+            </p>
+            <p>
+                Внимание! Я использовал <b>a-text</b> вместо <b><a-entity text="value: My first AR application"></a-entity></b>, для того чтобы текст был крупнее. Вы же можете использовать стандартный а-ембеддед
+            </p>
+            <p>
+                В итоге получился следующий код нашего первого AR-приложения:
+            </p>
+            <p>
+                <div className="py-6 bg-amber-400">
+                    <Code content={Codes.head_code} />
+                    <Code content={Codes.connect_AR} />
+                    <Code content={Codes.body_AR} />
+                    <Code content={Codes.end_code} />
+                    
+                    <button onClick={() => {navigator.clipboard.writeText(Codes.head_code + Codes.connect_AR + Codes.body_AR + Codes.end_code)}}>copy</button>
+                </div>
+            </p>
+        </article>
+        <article className="uk-article">
+            <p className="uk-text-lead">4. Теперь запускаем приложение.</p>
+            <p>4.1. Для этого создаём репозиторий на гитхабе.</p>
+            <p>
+                <p>
+                    Переходим по ссылке <a href="https://github.com/new">https://github.com/new</a>
+                    Затем заполняем Repository name - название Вашего репозитория, 
+                    ставим галочку на Add a readme file (она упростит клонирование репозитория) и нажимаем Create repository.
+                    В итоге Вы создали пустой репозиторий для запуска Вашего AR-приложения.
+                </p>
+                <p>
+                    <div className="flex items-center justify-center my-6">
+                        <img 
+                            src="../pictures/intro.jpeg" 
+                            alt="Создание репозитория"
+                        />
+                    </div>  
+                </p>
+            </p>
+            <p>4.2. Клонируем репозиторий на свой ПК.</p>
+            <p>
+                <p>
+                    Для этого формируем и переходим по ссылке https://github.com/ваш ник на гитхаб/название вашего репозитория
+                    Например, у меня доступ к репозиторию и следовательно к его клонированию получился https://github.com/mianger22/ar_dudar_lesson
+                    Перейдя по ссылке, мы попадаем на страницу репозитория.
+                    Жмем по зелёной кнопке Code и копируем значение из поля строки, кликнув по иконке сбоку
+                </p>
+                <p>
+                    <div className="flex items-center justify-center my-6">
+                        <img 
+                            src="../pictures/intro2.jpeg" 
+                            alt="Создание репозитория"
+                        />
+                    </div>
+                </p>
+            </p>
+            <p>4.3. Теперь открываем диск С, ищем место, где будет лежать наш склонированный проект.</p>
+            <p>
+                <p>
+                    Перед этим нужно установить GIT, вдобавок к нему можете скачать Git Bush (удобный инструмент для работы с GIT) 
+                    Если решили пользоваться данной программой, то когда её установите, кликаете в выбранном месте правой кнопкой, выбираете open git bash here, запускаете
+                    Если же нет, то надо открыть командную строку. Объяснять не буду, загуглите. 
+                    В общем, при любом решении у Вас откроется терминал. 
+                    Туда пишите git clone и нажимаете комбинацию Shift+Insert, чтобы вставилась скопированная строка с github`a, а затем - Enter
+                </p>
+                <p>
+                    <div className="flex items-center justify-center my-6">
+                        <img 
+                            src="../pictures/gitclone.jpeg" 
+                            alt="Создание репозитория"
+                        />
+                    </div>
+                </p>
+            </p>
+            <p>4.4. Теперь открываем склонированную папку и скидываем туда наш index.html.</p>
+            <p>
+                <p>
+                    После - открываем git bash или командную строку, если уже закрыли, если нет, то вводим cd {"наименование склонированной папки"} и 
+                    и пишем и запускаем следующие команды по очереди: 
+                </p>
+                <p>
+                    <div className="py-6 bg-amber-400">
+                        <Code content={Codes.git_commands} />
+
+                        <button onClick={() => {navigator.clipboard.writeText(Codes.git_commands)}}>copy</button>
+                    </div>
+                </p>
+                <p>
+                    Что они делают?
+                </p>
+                <p>
+                    а) <b>git add --all</b> добавляет все изменения в отслеживаемые
+                </p>
+                <p>
+                    б) <b>git commit -m "my first commit</b> коммитит их
+                </p>
+                <p>
+                    в) <b>git push</b> отправляет (сохраняет) изменения (наш код) на GitHub 
+                </p>
+                <p>
+                    Ура! Наш код сохранён. И мы его не потеряем в случае утраты компьютера. 
+                </p>
+            </p>
+            <p>4.5. Теперь запускаем наш проект, включив github pages.</p>
+            <p>
+                <p>Для этого:</p>
+                <p>4.5.1. Заходим в настройки проекта, как на скриншоте</p>
+                <p>4.5.2. Далее мы включаем данную настройку, чтобы у нас запустился сервис</p>
+                <p>Готово!</p>
+            </p>
+        </article>
+        <article className="uk-article">
+            <p className="uk-text-lead">5. Теперь смотрим - заработало ли приложение.</p>
+            <p>
+                Для этого 
+            </p>
+            <p>
+                5.1. создаём адрес в соответствие с шаблоном - - , где это - ваш ник на гитхаб, а это - имя репозитория. Сохраняем данный адрес, заливаем его в мессенджер, используемый Вами. Например, в телеграмм. 
+            </p>
+            <p>
+                5.2. Заходим с телефона по нему. Вуаля! <b>Наше приложение запущено!</b> тут анимация или смайл
+            </p>
+            <p>
+                5.3. Теперь наводим камерой на следующий маркер (мы его указывали в коде командой ..)
+            </p>
+            <p>
+                <div className="flex items-center justify-center my-6">
+                    <img 
+                        src="https://leonardo.osnova.io/af634cb0-038a-5245-8169-385adf3fb9ad/-/preview/1000/-/format/webp/" 
+                        alt="AR метка"
+                    />
+                </div> 
+            </p>
+            <p>
+                Наводим так, чтобы он весь уместился на экране и был как можно более параллелен смартфону. Ждём, пока наша программа проанализирует. 
+                В итоге у нас должен появиться текст ... как на фото ниже.
+
+                Если получилось, поздравляю Вас с первой AR - программой. 
+
+                Очень просто. Верно?
+            </p>
+        </article>
+        <article className="uk-article">
+            <p>Можете протестировать мой результат прежде чем возиться со своим, или чтобы сравнить свой с моим</p>
+        </article>
     </div>
   );
 }
