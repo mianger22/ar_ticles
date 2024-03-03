@@ -1,5 +1,9 @@
 import Code from "../../Common/Code";
 import BoldCode from "../../Common/BoldCode";
+import intro from "../../pictures/intro.jpg";
+import intro2 from "../../pictures/intro2.jpg";
+import gitclone from "../../pictures/gitclone.jpg";
+
 // import { 
 //     Article,
 // } from 'uikit-react';
@@ -136,7 +140,7 @@ function CenterBlock() {
                 <p>
                     <div className="flex items-center justify-center my-6">
                         <img 
-                            src="../pictures/intro.jpeg" 
+                            src={intro} 
                             alt="Создание репозитория"
                         />
                     </div>  
@@ -153,7 +157,7 @@ function CenterBlock() {
                 <p>
                     <div className="flex items-center justify-center my-6">
                         <img 
-                            src="../pictures/intro2.jpeg" 
+                            src={intro2} 
                             alt="Создание репозитория"
                         />
                     </div>
@@ -171,7 +175,7 @@ function CenterBlock() {
                 <p>
                     <div className="flex items-center justify-center my-6">
                         <img 
-                            src="../pictures/gitclone.jpeg" 
+                            src={gitclone} 
                             alt="Создание репозитория"
                         />
                     </div>
