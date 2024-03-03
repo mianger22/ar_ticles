@@ -68,12 +68,11 @@ function CenterBlock() {
         <article className="uk-article">
             <p className="uk-text-lead">1. Создаём стандартный html-файл.</p>
             <div className="uk-card uk-card-default uk-card-body uk-margin-medium-top uk-margin-medium-bottom">
+                <CopyButton codes={Codes.head_code + Codes.comments.code + Codes.end_code} />
                 <p>
                     <Code content={Codes.head_code} />
                     <b><Code content={Codes.comments.code} /></b>
                     <Code content={Codes.end_code} />
-
-                    <CopyButton codes={Codes.head_code + Codes.comments.code + Codes.end_code} />
                 </p>
             </div>
             <p>
@@ -84,13 +83,12 @@ function CenterBlock() {
         <article className="uk-article">
             <p className="uk-text-lead">2. Подключаем библиотеку AR.js, прописывая соответствующие теги в index.html в разделе body:</p>
             <div className="uk-card uk-card-default uk-card-body uk-margin-medium-top uk-margin-medium-bottom">
+                <CopyButton codes={Codes.head_code + Codes.connect_AR + Codes.comments.connect + Codes.end_code} />
                 <p>
                     <Code content={Codes.head_code} />
                     <b><Code content={Codes.connect_AR} /></b>
                     <b><Code content={Codes.comments.connect} /></b>
                     <Code content={Codes.end_code} />
-                    
-                    <CopyButton codes={Codes.head_code + Codes.connect_AR + Codes.comments.connect + Codes.end_code} />
                 </p>
             </div>
         </article>
@@ -118,18 +116,17 @@ function CenterBlock() {
                 В итоге получился следующий код нашего первого AR-приложения:
             </p>
             <div className="uk-card uk-card-default uk-card-body uk-margin-medium-top uk-margin-medium-bottom">
+                <CopyButton codes={Codes.head_code + Codes.connect_AR + Codes.body_AR + Codes.end_code} />
                 <p>
                     <Code content={Codes.head_code} />
                     <Code content={Codes.connect_AR} />
                     <Code content={Codes.body_AR} />
                     <Code content={Codes.end_code} />
-
-                    <CopyButton codes={Codes.head_code + Codes.connect_AR + Codes.body_AR + Codes.end_code} />
                 </p>
             </div>
         </article>
         <article className="uk-article">
-            <p className="uk-text-lead uk-margin-small-bottom">4. Теперь запускаем приложение.</p>
+            <p className="uk-text-lead uk-margin-medium-bottom">4. Теперь запускаем приложение.</p>
             <p className="uk-margin-small-bottom">4.1. Для этого создаём репозиторий на гитхабе.</p>
             <p>
                 <p>
@@ -189,9 +186,9 @@ function CenterBlock() {
                     и пишем и запускаем следующие команды по очереди: 
                 </p>
                 <div className="uk-card uk-card-default uk-card-body uk-margin-medium-top uk-margin-medium-bottom">
+                    <CopyButton codes={Codes.git_commands} />
                     <p>
                         <Code content={Codes.git_commands} />
-                        <CopyButton codes={Codes.git_commands} />
                     </p>
                 </div>
                 <p className="uk-margin-small-bottom">
@@ -219,7 +216,7 @@ function CenterBlock() {
             </p>
         </article>
         <article className="uk-article">
-            <p className="uk-text-lead uk-margin-small-bottom">5. Теперь смотрим - заработало ли приложение.</p>
+            <p className="uk-text-lead uk-margin-medium-bottom">5. Теперь смотрим - заработало ли приложение.</p>
             <p>
                 Для этого 
             </p>
