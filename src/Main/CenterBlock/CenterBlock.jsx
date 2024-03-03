@@ -38,7 +38,7 @@ const Codes = {
         </html>`,
     "body_AR": `\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0<a-scene embedded arjs>
         \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0<a-marker preset="hiro">
-        \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0<a-text value="YA LUBLU TEBYA, MALISH :*" color="blue" scale="2 2 1"></a-text>
+        \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0<a-text value="My first AR application" color="blue" scale="2 2 1"></a-text>
         \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0</a-marker>
         \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0<a-entity camera></a-entity>
         \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0</a-scene>`,
@@ -62,15 +62,15 @@ function CenterBlock() {
         </div>
         <article className="uk-article">
             <p className="uk-text-lead">1. Создаём стандартный html-файл.</p>
-            <p>
-                <div className="mb-6 py-6 bg-amber-400">
+            <div className="uk-card uk-card-default uk-card-body uk-margin-medium-top uk-margin-medium-bottom">
+                <p>
                     <Code content={Codes.head_code} />
                     <b><Code content={Codes.comments.code} /></b>
                     <Code content={Codes.end_code} />
 
                     <button onClick={() => {navigator.clipboard.writeText(Codes.head_code + Codes.comments.code + Codes.end_code)}}>copy</button>
-                </div>
-            </p>
+                </p>
+            </div>
             <p>
                 <b>Attention!</b> Мы пишем <BoldCode content={Codes.correct_meta} /> 
                     вместо <BoldCode content={Codes.uncorrect_meta} /> для того, чтобы камера была без неприятного и неудобного увеличения
@@ -78,24 +78,24 @@ function CenterBlock() {
         </article>
         <article className="uk-article">
             <p className="uk-text-lead">2. Подключаем библиотеку AR.js, прописывая соответствующие теги в index.html в разделе body:</p>
-            <p>
-                <div className="py-6 bg-amber-400">
+            <div className="uk-card uk-card-default uk-card-body uk-margin-medium-top uk-margin-medium-bottom">
+                <p>
                     <Code content={Codes.head_code} />
                     <b><Code content={Codes.connect_AR} /></b>
                     <b><Code content={Codes.comments.connect} /></b>
                     <Code content={Codes.end_code} />
                     
                     <button onClick={() => {navigator.clipboard.writeText(Codes.head_code + Codes.connect_AR + Codes.comments.connect + Codes.end_code)}}>copy</button>
-                </div>
-            </p>
+                </p>
+            </div>
         </article>
         <article className="uk-article">
             <p className="uk-text-lead">3. Добавляем следующий код:</p>
-            <p>
-                <div className="mb-6 bg-amber-400">
+            <div className="uk-card uk-card-default uk-card-body uk-margin-medium-top uk-margin-medium-bottom">
+                <p>
                     <Code content={Codes.body_AR} />
-                </div>
-            </p>
+                </p>
+            </div>
             <p>
                 Что он делает?
             </p>
@@ -112,16 +112,16 @@ function CenterBlock() {
             <p>
                 В итоге получился следующий код нашего первого AR-приложения:
             </p>
-            <p>
-                <div className="py-6 bg-amber-400">
+            <div className="uk-card uk-card-default uk-card-body uk-margin-medium-top uk-margin-medium-bottom">
+                <p>
                     <Code content={Codes.head_code} />
                     <Code content={Codes.connect_AR} />
                     <Code content={Codes.body_AR} />
                     <Code content={Codes.end_code} />
                     
                     <button onClick={() => {navigator.clipboard.writeText(Codes.head_code + Codes.connect_AR + Codes.body_AR + Codes.end_code)}}>copy</button>
-                </div>
-            </p>
+                </p>
+            </div>
         </article>
         <article className="uk-article">
             <p className="uk-text-lead">4. Теперь запускаем приложение.</p>
@@ -183,13 +183,13 @@ function CenterBlock() {
                     После - открываем git bash или командную строку, если уже закрыли, если нет, то вводим cd {"наименование склонированной папки"} и 
                     и пишем и запускаем следующие команды по очереди: 
                 </p>
-                <p>
-                    <div className="py-6 bg-amber-400">
+                <div className="uk-card uk-card-default uk-card-body uk-margin-medium-top uk-margin-medium-bottom">
+                    <p>
                         <Code content={Codes.git_commands} />
 
                         <button onClick={() => {navigator.clipboard.writeText(Codes.git_commands)}}>copy</button>
-                    </div>
-                </p>
+                    </p>
+                </div>
                 <p>
                     Что они делают?
                 </p>
