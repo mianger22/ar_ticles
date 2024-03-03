@@ -3,6 +3,7 @@ import BoldCode from "../../Common/BoldCode";
 import intro from "../../pictures/intro.jpg";
 import intro2 from "../../pictures/intro2.jpg";
 import gitclone from "../../pictures/gitclone.jpg";
+import CopyButton from "../../Common/CopyButton";
 
 // import { 
 //     Article,
@@ -72,7 +73,7 @@ function CenterBlock() {
                     <b><Code content={Codes.comments.code} /></b>
                     <Code content={Codes.end_code} />
 
-                    <button onClick={() => {navigator.clipboard.writeText(Codes.head_code + Codes.comments.code + Codes.end_code)}}>copy</button>
+                    <CopyButton codes={Codes.head_code + Codes.comments.code + Codes.end_code} />
                 </p>
             </div>
             <p>
@@ -89,7 +90,7 @@ function CenterBlock() {
                     <b><Code content={Codes.comments.connect} /></b>
                     <Code content={Codes.end_code} />
                     
-                    <button onClick={() => {navigator.clipboard.writeText(Codes.head_code + Codes.connect_AR + Codes.comments.connect + Codes.end_code)}}>copy</button>
+                    <CopyButton codes={Codes.head_code + Codes.connect_AR + Codes.comments.connect + Codes.end_code} />
                 </p>
             </div>
         </article>
@@ -122,8 +123,8 @@ function CenterBlock() {
                     <Code content={Codes.connect_AR} />
                     <Code content={Codes.body_AR} />
                     <Code content={Codes.end_code} />
-                    
-                    <button onClick={() => {navigator.clipboard.writeText(Codes.head_code + Codes.connect_AR + Codes.body_AR + Codes.end_code)}}>copy</button>
+
+                    <CopyButton codes={Codes.head_code + Codes.connect_AR + Codes.body_AR + Codes.end_code} />
                 </p>
             </div>
         </article>
@@ -190,8 +191,7 @@ function CenterBlock() {
                 <div className="uk-card uk-card-default uk-card-body uk-margin-medium-top uk-margin-medium-bottom">
                     <p>
                         <Code content={Codes.git_commands} />
-
-                        <button onClick={() => {navigator.clipboard.writeText(Codes.git_commands)}}>copy</button>
+                        <CopyButton codes={Codes.git_commands} />
                     </p>
                 </div>
                 <p className="uk-margin-small-bottom">
