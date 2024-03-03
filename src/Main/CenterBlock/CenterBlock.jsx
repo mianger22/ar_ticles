@@ -4,6 +4,7 @@ import intro from "../../pictures/intro.jpg";
 import intro2 from "../../pictures/intro2.jpg";
 import gitclone from "../../pictures/gitclone.jpg";
 import CopyButton from "../../Common/CopyButton";
+import CardCode from "../../Common/CardCode";
 
 // import { 
 //     Article,
@@ -67,14 +68,24 @@ function CenterBlock() {
         </div>
         <article className="uk-article">
             <p className="uk-text-lead">1. Создаём стандартный html-файл.</p>
-            <div className="uk-card uk-card-default uk-card-body uk-margin-medium-top uk-margin-medium-bottom">
+            {/* <div className="uk-card uk-card-default uk-card-body uk-margin-medium-top uk-margin-medium-bottom">
                 <CopyButton codes={Codes.head_code + Codes.comments.code + Codes.end_code} />
                 <p>
                     <Code content={Codes.head_code} />
                     <b><Code content={Codes.comments.code} /></b>
                     <Code content={Codes.end_code} />
                 </p>
-            </div>
+            </div> */}
+
+            <CardCode 
+                set_codes={
+                    {
+                        "head": Codes.head_code,
+                        "comments": Codes.comments.code,
+                        "end": Codes.end_code
+                    }
+                }
+            />
             <p>
                 <b>Attention!</b> Мы пишем <BoldCode content={Codes.correct_meta} /> 
                     вместо <BoldCode content={Codes.uncorrect_meta} /> для того, чтобы камера была без неприятного и неудобного увеличения
@@ -82,7 +93,7 @@ function CenterBlock() {
         </article>
         <article className="uk-article">
             <p className="uk-text-lead">2. Подключаем библиотеку AR.js, прописывая соответствующие теги в index.html в разделе body:</p>
-            <div className="uk-card uk-card-default uk-card-body uk-margin-medium-top uk-margin-medium-bottom">
+            {/* <div className="uk-card uk-card-default uk-card-body uk-margin-medium-top uk-margin-medium-bottom">
                 <CopyButton codes={Codes.head_code + Codes.connect_AR + Codes.comments.connect + Codes.end_code} />
                 <p>
                     <Code content={Codes.head_code} />
@@ -90,7 +101,17 @@ function CenterBlock() {
                     <b><Code content={Codes.comments.connect} /></b>
                     <Code content={Codes.end_code} />
                 </p>
-            </div>
+            </div> */}
+            <CardCode 
+                set_codes={
+                    {
+                        "head": Codes.head_code,
+                        "connect": Codes.connect_AR,
+                        "comments": Codes.comments.connect,
+                        "end": Codes.end_code
+                    }
+                }
+            />
         </article>
         <article className="uk-article">
             <p className="uk-text-lead">3. Добавляем следующий код:</p>
@@ -115,7 +136,7 @@ function CenterBlock() {
             <p>
                 В итоге получился следующий код нашего первого AR-приложения:
             </p>
-            <div className="uk-card uk-card-default uk-card-body uk-margin-medium-top uk-margin-medium-bottom">
+            {/* <div className="uk-card uk-card-default uk-card-body uk-margin-medium-top uk-margin-medium-bottom">
                 <CopyButton codes={Codes.head_code + Codes.connect_AR + Codes.body_AR + Codes.end_code} />
                 <p>
                     <Code content={Codes.head_code} />
@@ -123,7 +144,17 @@ function CenterBlock() {
                     <Code content={Codes.body_AR} />
                     <Code content={Codes.end_code} />
                 </p>
-            </div>
+            </div> */}
+            <CardCode 
+                set_codes={
+                    {
+                        "head": Codes.head_code,
+                        "connect": Codes.connect_AR,
+                        "ar": Codes.body_AR,
+                        "end": Codes.end_code
+                    }
+                }
+            />
         </article>
         <article className="uk-article">
             <p className="uk-text-lead uk-margin-medium-bottom">4. Теперь запускаем приложение.</p>
@@ -185,12 +216,20 @@ function CenterBlock() {
                     После - открываем git bash или командную строку, если уже закрыли, если нет, то вводим cd {"наименование склонированной папки"} и 
                     и пишем и запускаем следующие команды по очереди: 
                 </p>
-                <div className="uk-card uk-card-default uk-card-body uk-margin-medium-top uk-margin-medium-bottom">
+                {/* <div className="uk-card uk-card-default uk-card-body uk-margin-medium-top uk-margin-medium-bottom">
                     <CopyButton codes={Codes.git_commands} />
                     <p>
                         <Code content={Codes.git_commands} />
                     </p>
-                </div>
+                </div> */}
+
+                <CardCode 
+                set_codes={
+                    {
+                        "git": Codes.git_commands,
+                    }
+                }
+            />
                 <p className="uk-margin-small-bottom">
                     Что они делают?
                 </p>
