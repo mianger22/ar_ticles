@@ -124,8 +124,8 @@ function CenterBlock() {
             </div>
         </article>
         <article className="uk-article">
-            <p className="uk-text-lead">4. Теперь запускаем приложение.</p>
-            <p>4.1. Для этого создаём репозиторий на гитхабе.</p>
+            <p className="uk-text-lead uk-margin-small-bottom">4. Теперь запускаем приложение.</p>
+            <p className="uk-margin-small-bottom">4.1. Для этого создаём репозиторий на гитхабе.</p>
             <p>
                 <p>
                     Переходим по ссылке <a href="https://github.com/new">https://github.com/new</a>
@@ -142,7 +142,7 @@ function CenterBlock() {
                     </div>  
                 </p>
             </p>
-            <p>4.2. Клонируем репозиторий на свой ПК.</p>
+            <p className="uk-margin-small-bottom">4.2. Клонируем репозиторий на свой ПК.</p>
             <p>
                 <p>
                     Для этого формируем и переходим по ссылке https://github.com/ваш ник на гитхаб/название вашего репозитория
@@ -190,7 +190,7 @@ function CenterBlock() {
                         <button onClick={() => {navigator.clipboard.writeText(Codes.git_commands)}}>copy</button>
                     </p>
                 </div>
-                <p>
+                <p className="uk-margin-small-bottom">
                     Что они делают?
                 </p>
                 <p>
@@ -211,11 +211,11 @@ function CenterBlock() {
                 <p>Для этого:</p>
                 <p>4.5.1. Заходим в настройки проекта, как на скриншоте</p>
                 <p>4.5.2. Далее мы включаем данную настройку, чтобы у нас запустился сервис</p>
-                <p>Готово!</p>
+                <p className="uk-margin-small-top">Готово!</p>
             </p>
         </article>
         <article className="uk-article">
-            <p className="uk-text-lead">5. Теперь смотрим - заработало ли приложение.</p>
+            <p className="uk-text-lead uk-margin-small-bottom">5. Теперь смотрим - заработало ли приложение.</p>
             <p>
                 Для этого 
             </p>
@@ -229,7 +229,7 @@ function CenterBlock() {
                 5.3. Теперь наводим камерой на следующий маркер (мы его указывали в коде командой ..)
             </p>
             <p>
-                <div className="flex items-center justify-center my-6">
+                <div className="flex items-center justify-center my-6 uk-margin-medium-top uk-margin-medium-bottom">
                     <img 
                         src="https://leonardo.osnova.io/af634cb0-038a-5245-8169-385adf3fb9ad/-/preview/1000/-/format/webp/" 
                         alt="AR метка"
@@ -245,7 +245,7 @@ function CenterBlock() {
                 Очень просто. Верно?
             </p>
         </article>
-        <article className="uk-article">
+        <article className="uk-article uk-margin-large-bottom">
             <p>Можете протестировать мой результат прежде чем возиться со своим, или чтобы сравнить свой с моим</p>
         </article>
     </div>
