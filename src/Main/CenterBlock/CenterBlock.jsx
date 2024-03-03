@@ -52,9 +52,7 @@ function CenterBlock() {
   return (
     <div>
         <div className="flex items-center justify-center my-6">
-            <h1 className="text-xl font-bold">
-                Создание первого AR-приложения с помощью AR.js
-            </h1>
+            <h1 className="uk-heading-small">Создание первого AR-приложения с помощью AR.js</h1>
         </div>
         <div className="mb-6">
             <img src="https://images.firstpost.com/wp-content/uploads/2019/02/Google-Maps-AR.jpg" alt="imagear" />
