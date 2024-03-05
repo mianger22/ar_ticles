@@ -68,15 +68,6 @@ function CenterBlock() {
         </div>
         <article className="uk-article">
             <p className="uk-text-lead">1. Создаём стандартный html-файл.</p>
-            {/* <div className="uk-card uk-card-default uk-card-body uk-margin-medium-top uk-margin-medium-bottom">
-                <CopyButton codes={Codes.head_code + Codes.comments.code + Codes.end_code} />
-                <p>
-                    <Code content={Codes.head_code} />
-                    <b><Code content={Codes.comments.code} /></b>
-                    <Code content={Codes.end_code} />
-                </p>
-            </div> */}
-
             <CardCode 
                 set_codes={
                     {
@@ -93,15 +84,6 @@ function CenterBlock() {
         </article>
         <article className="uk-article">
             <p className="uk-text-lead">2. Подключаем библиотеку AR.js, прописывая соответствующие теги в index.html в разделе body:</p>
-            {/* <div className="uk-card uk-card-default uk-card-body uk-margin-medium-top uk-margin-medium-bottom">
-                <CopyButton codes={Codes.head_code + Codes.connect_AR + Codes.comments.connect + Codes.end_code} />
-                <p>
-                    <Code content={Codes.head_code} />
-                    <b><Code content={Codes.connect_AR} /></b>
-                    <b><Code content={Codes.comments.connect} /></b>
-                    <Code content={Codes.end_code} />
-                </p>
-            </div> */}
             <CardCode 
                 set_codes={
                     {
@@ -136,15 +118,6 @@ function CenterBlock() {
             <p>
                 В итоге получился следующий код нашего первого AR-приложения:
             </p>
-            {/* <div className="uk-card uk-card-default uk-card-body uk-margin-medium-top uk-margin-medium-bottom">
-                <CopyButton codes={Codes.head_code + Codes.connect_AR + Codes.body_AR + Codes.end_code} />
-                <p>
-                    <Code content={Codes.head_code} />
-                    <Code content={Codes.connect_AR} />
-                    <Code content={Codes.body_AR} />
-                    <Code content={Codes.end_code} />
-                </p>
-            </div> */}
             <CardCode 
                 set_codes={
                     {
@@ -216,20 +189,13 @@ function CenterBlock() {
                     После - открываем git bash или командную строку, если уже закрыли, если нет, то вводим cd {"наименование склонированной папки"} и 
                     и пишем и запускаем следующие команды по очереди: 
                 </p>
-                {/* <div className="uk-card uk-card-default uk-card-body uk-margin-medium-top uk-margin-medium-bottom">
-                    <CopyButton codes={Codes.git_commands} />
-                    <p>
-                        <Code content={Codes.git_commands} />
-                    </p>
-                </div> */}
-
                 <CardCode 
-                set_codes={
-                    {
-                        "git": Codes.git_commands,
+                    set_codes={
+                        {
+                            "git": Codes.git_commands,
+                        }
                     }
-                }
-            />
+                />
                 <p className="uk-margin-small-bottom">
                     Что они делают?
                 </p>
