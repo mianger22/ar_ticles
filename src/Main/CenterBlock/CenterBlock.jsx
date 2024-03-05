@@ -97,11 +97,13 @@ function CenterBlock() {
         </article>
         <article className="uk-article">
             <p className="uk-text-lead">3. Добавляем следующий код:</p>
-            <div className="uk-card uk-card-default uk-card-body uk-margin-medium-top uk-margin-medium-bottom">
-                <p>
-                    <Code content={Codes.body_AR} />
-                </p>
-            </div>
+            <CardCode 
+                set_codes={
+                    {
+                        "body_ar": Codes.body_AR,
+                    }
+                }
+            />
             <p>
                 Что он делает?
             </p>
