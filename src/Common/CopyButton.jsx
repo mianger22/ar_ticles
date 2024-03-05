@@ -18,8 +18,8 @@ function CopyButton({ codes }) {
         <div className="uk-card-badge uk-background-default">
             <button onClick={copy}>
                 {
-                    copied ? <img width="32" height="32" src="https://img.icons8.com/windows/32/ok--v1.png" alt="ok--v1"/>
-                    : <img width="30" height="30" src="https://img.icons8.com/ios/50/copy--v1.png" alt="copy code" />
+                    copied ? <img width="32" height="32" src="https://img.icons8.com/fluency/48/ok--v1.png" alt="success copied icon"/>
+                    : <img width="20" height="20" src="https://img.icons8.com/ios/50/copy--v1.png" alt="copy icon" />
                 }
             </button>
         </div>
