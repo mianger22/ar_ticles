@@ -1,10 +1,9 @@
-import Code from "../../Common/Code";
 import BoldCode from "../../Common/BoldCode";
 import intro from "../../pictures/intro.jpg";
 import intro2 from "../../pictures/intro2.jpg";
 import gitclone from "../../pictures/gitclone.jpg";
-import CopyButton from "../../Common/CopyButton";
 import CardCode from "../../Common/CardCode";
+import Link from "../../Common/Link";
 
 // import { 
 //     Article,
@@ -51,7 +50,8 @@ const Codes = {
     "git_commands": 
         `git add --all
         git commit -m "my first commit"
-        git push`
+        git push`,
+    "another_version_ar_text": `<a-entity text="value: My first AR application"></a-entity>`
 }
 
 function CenterBlock() {
@@ -115,7 +115,17 @@ function CenterBlock() {
                 Всё, что внутри - выводит нужное нам содержимое над маркеромю. У нас это текст
             </p>
             <p>
-                Внимание! Я использовал <b>a-text</b> вместо <b><a-entity text="value: My first AR application"></a-entity></b>, для того чтобы текст был крупнее. Вы же можете использовать стандартный а-ембеддед
+                Внимание! Я использовал <b>a-text</b> вместо <b>a-entity</b>, для того чтобы текст был крупнее. Вы же можете использовать его: 
+            </p>
+            <CardCode 
+                set_codes={
+                    {
+                        "ar_text": Codes.another_version_ar_text,
+                    }
+                }
+            />
+            <p>
+                <b>Примечание</b>. Что такое <b>a-entity text ...</b> и откуда я взял <b>a-text</b> читайте <Link link_name="здесь" link_path="https://aframe.io/docs/1.0.0/components/text.html#sizing" />
             </p>
             <p>
                 В итоге получился следующий код нашего первого AR-приложения:
@@ -136,7 +146,7 @@ function CenterBlock() {
             <p className="uk-margin-small-bottom">4.1. Для этого создаём репозиторий на гитхабе.</p>
             <p>
                 <p>
-                    Переходим по ссылке <a href="https://github.com/new">https://github.com/new</a>
+                    Переходим по ссылке <Link link_name="https://github.com/new" link_path="https://github.com/new" />
                     Затем заполняем Repository name - название Вашего репозитория, 
                     ставим галочку на Add a readme file (она упростит клонирование репозитория) и нажимаем Create repository.
                     В итоге Вы создали пустой репозиторий для запуска Вашего AR-приложения.
@@ -210,7 +220,7 @@ function CenterBlock() {
                 <p>
                     в) <b>git push</b> отправляет (сохраняет) изменения (наш код) на GitHub 
                 </p>
-                <p>
+                <p className="uk-margin-small-bottom">
                     Ура! Наш код сохранён. И мы его не потеряем в случае утраты компьютера. 
                 </p>
             </p>
@@ -255,6 +265,7 @@ function CenterBlock() {
         </article>
         <article className="uk-article uk-margin-large-bottom">
             <p>Можете протестировать мой результат прежде чем возиться со своим, или чтобы сравнить свой с моим</p>
+                    Что ещё интересного почитать по этой теме? 1.
         </article>
     </div>
   );
