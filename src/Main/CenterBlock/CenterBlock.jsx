@@ -146,9 +146,8 @@ function CenterBlock() {
             <p className="uk-margin-small-bottom">4.1. Для этого создаём репозиторий на гитхабе.</p>
             <p>
                 <p>
-                    Переходим по ссылке <Link link_name="https://github.com/new" link_path="https://github.com/new" />
-                    Затем заполняем Repository name - название Вашего репозитория, 
-                    ставим галочку на Add a readme file (она упростит клонирование репозитория) и нажимаем Create repository.
+                    Переходим по ссылке <Link link_name="https://github.com/new" link_path="https://github.com/new" />. Заполняем <i>Repository name</i> (это название Вашего репозитория), 
+                    ставим галочку на <i>Add a readme file</i> (она упростит клонирование репозитория) и нажимаем <i>Create repository</i>.
                     В итоге Вы создали пустой репозиторий для запуска Вашего AR-приложения.
                 </p>
                 <p>
@@ -162,11 +161,11 @@ function CenterBlock() {
             </p>
             <p className="uk-margin-small-bottom">4.2. Клонируем репозиторий на свой ПК.</p>
             <p>
+                <p className="uk-margin-small-bottom">
+                    Для этого формируем ссылку вида <i>https://github.com/ваш ник на гитхаб/название вашего репозитория</i> и переходим по ней. Например, у меня доступ к репозиторию и следовательно к его клонированию получился <i>https://github.com/mianger22/ar_dudar_lesson</i>.
+                </p>
                 <p>
-                    Для этого формируем и переходим по ссылке https://github.com/ваш ник на гитхаб/название вашего репозитория
-                    Например, у меня доступ к репозиторию и следовательно к его клонированию получился https://github.com/mianger22/ar_dudar_lesson
-                    Перейдя по ссылке, мы попадаем на страницу репозитория.
-                    Жмем по зелёной кнопке Code и копируем значение из поля строки, кликнув по иконке сбоку
+                    Перейдя по ссылке, мы попадаем на страницу репозитория. Далее жмём по зелёной кнопке <i>Code</i> и копируем значение из поля строки, кликнув по иконке сбоку.
                 </p>
                 <p>
                     <div className="flex items-center justify-center my-6">
