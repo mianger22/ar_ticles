@@ -1,9 +1,11 @@
 import BoldCode from "../../Common/BoldCode";
-import intro from "../../pictures/intro.jpg";
-import intro2 from "../../pictures/intro2.jpg";
-import gitclone from "../../pictures/gitclone.jpg";
+import intro from "../../Pictures/intro.jpg";
+import intro2 from "../../Pictures/intro2.jpg";
+import gitclone from "../../Pictures/gitclone.jpg";
+import open_settings from "../../Pictures/open_settings.jpg";
 import CardCode from "../../Common/CardCode";
 import Link from "../../Common/Link";
+import Picture from "../../Common/Picture";
 
 // import { 
 //     Article,
@@ -60,9 +62,7 @@ function CenterBlock() {
         <div className="flex items-center justify-center my-6">
             <h1 className="uk-heading-small">Создание первого AR-приложения с помощью AR.js</h1>
         </div>
-        <div className="mb-6">
-            <img src="https://images.firstpost.com/wp-content/uploads/2019/02/Google-Maps-AR.jpg" alt="imagear" />
-        </div>
+        <Picture picture_path="https://images.firstpost.com/wp-content/uploads/2019/02/Google-Maps-AR.jpg" picture_alt='AR' />
         <div className="italic flex items-center justify-center mb-6">
             Всё просто.
         </div>
@@ -73,7 +73,9 @@ function CenterBlock() {
             </p>
             <p>
                 1. Нам понадобится любая среда разработки: VSCode, WebStorm или что-нибудь другое. 
-                2. GIT - обязательно. И желательно Git Bash <Link link_name='GitBash' link_path='' />. Иначе придётся делать в командной строке.  Мне нравится GitBash за удобство работы с Git.
+            </p>
+            <p>
+                2. GIT - обязательно. И желательно <Link link_name='GitBash' link_path='' />. Иначе придётся делать в командной строке.  Мне нравится GitBash за удобство работы с Git.
             </p>
         </article>
         <article className="uk-article">
@@ -160,14 +162,7 @@ function CenterBlock() {
                     ставим галочку на <i>Add a readme file</i> (она упростит клонирование репозитория) и нажимаем <i>Create repository</i>.
                     В итоге Вы создали пустой репозиторий для запуска Вашего AR-приложения.
                 </p>
-                <p>
-                    <div className="flex items-center justify-center my-6">
-                        <img 
-                            src={intro} 
-                            alt="Создание репозитория"
-                        />
-                    </div>  
-                </p>
+                <Picture picture_path={intro} picture_alt='Создание репозитория' />
             </p>
             <p className="uk-margin-small-bottom">4.2. Клонируем репозиторий на свой ПК.</p>
             <p>
@@ -177,14 +172,7 @@ function CenterBlock() {
                 <p>
                     Перейдя по ссылке, мы попадаем на страницу репозитория. Далее жмём по зелёной кнопке <i>Code</i> и копируем значение из поля строки, кликнув по иконке сбоку.
                 </p>
-                <p>
-                    <div className="flex items-center justify-center my-6">
-                        <img 
-                            src={intro2} 
-                            alt="Создание репозитория"
-                        />
-                    </div>
-                </p>
+                <Picture picture_path={intro2} picture_alt='Скопировать код репозитория' />
             </p>
             <p>4.3. Теперь открываем диск С, ищем место, где будет лежать наш склонированный проект.</p>
             <p>
@@ -194,19 +182,12 @@ function CenterBlock() {
                 <p>
                     Вводите <i>git clone</i> и нажимаете комбинацию Shift+Insert, чтобы вставилась скопированная строка с github`a, затем - Enter.
                 </p>
-                <p>
-                    <div className="flex items-center justify-center my-6">
-                        <img 
-                            src={gitclone} 
-                            alt="Создание репозитория"
-                        />
-                    </div>
-                </p>
+                <Picture picture_path={gitclone} picture_alt='Клонируем папку' />
             </p>
             <p>4.4. Теперь переходим в склонированную папку и скидываем туда наш index.html.</p>
             <p>
                 <p>
-                    После - открываем git bash или командную строку, если уже закрыли, если нет, то вводим <i>cd наименование склонированной папки</i>, а после - пишем и запускаем следующие команды по очереди: 
+                    После - открываем git bash или командную строку, если уже закрыли, если нет, то вводим <i>cd наименование склонированной папки</i>, а после - копируем и Enter`ом запускаем следующие команды: 
                 </p>
                 <CardCode 
                     set_codes={
@@ -224,7 +205,7 @@ function CenterBlock() {
                             а) <b>git add --all</b> добавляет все изменения в отслеживаемые
                         </li>
                         <li>
-                            б) <b>git commit -m "my first commit</b> коммитит их
+                            б) <b>git commit -m "my first commit"</b> коммитит их
                         </li>
                         <li>
                             в) <b>git push</b> отправляет (сохраняет) изменения (наш код) на GitHub 
@@ -239,6 +220,7 @@ function CenterBlock() {
             <p>
                 <p>Для этого:</p>
                 <p>4.5.1. Заходим в настройки проекта, как на скриншоте</p>
+
                 <p>4.5.2. Далее мы включаем данную настройку, чтобы у нас запустился сервис</p>
                 <p className="uk-margin-small-top">Готово!</p>
             </p>
@@ -254,18 +236,11 @@ function CenterBlock() {
             <p>
                 5.2. Заходим с телефона по нему. Вуаля! <b>Наше приложение запущено!</b> тут анимация или смайл
             </p>
-            <p>
+            <p className="uk-margin-medium-bottom">
                 5.3. Теперь наводим камерой на следующий маркер (мы его указывали в коде командой ..)
             </p>
-            <p>
-                <div className="flex items-center justify-center my-6 uk-margin-medium-top uk-margin-medium-bottom">
-                    <img 
-                        src="https://leonardo.osnova.io/af634cb0-038a-5245-8169-385adf3fb9ad/-/preview/1000/-/format/webp/" 
-                        alt="AR метка"
-                    />
-                </div> 
-            </p>
-            <p>
+            <Picture picture_path="https://leonardo.osnova.io/af634cb0-038a-5245-8169-385adf3fb9ad/-/preview/1000/-/format/webp/" picture_alt='AR-метка' />
+            <p className="uk-margin-medium-top">
                 Наводим так, чтобы он весь уместился на экране и был как можно более параллелен смартфону. Ждём, пока наша программа проанализирует. 
                 В итоге у нас должен появиться текст ... как на фото ниже.
 
