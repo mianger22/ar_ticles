@@ -1,8 +1,12 @@
 import BoldCode from "../../Common/BoldCode";
-import intro from "../../Pictures/intro.jpg";
-import intro2 from "../../Pictures/intro2.jpg";
-import gitclone from "../../Pictures/gitclone.jpg";
-import open_settings from "../../Pictures/open_settings.jpg";
+import create_repository from "../../Pictures/create_repository.jpg";
+import click_by_button_code from "../../Pictures/click_by_button_code.jpg";
+import copy_url from "../../Pictures/copy_url.jpg";
+import open_gitbash from "../../Pictures/open_gitbash.jpg";
+import success_push from "../../Pictures/success_push.jpg";
+import opening_project_settings from "../../Pictures/opening_project_settings.jpg";
+import opening_pages_tab from "../../Pictures/opening_pages_tab.jpg";
+import changing_GitHub_Pages_parameters from "../../Pictures/changing_GitHub_Pages_parameters.jpg";
 import CardCode from "../../Common/CardCode";
 import Link from "../../Common/Link";
 import Picture from "../../Common/Picture";
@@ -67,19 +71,19 @@ function CenterBlock() {
             Всё просто.
         </div>
         <article className="uk-article">
-            <p className="uk-text-lead">0. Достаём инструменты, без которых ничего не получится.</p>
+            <p className="uk-text-lead">1. Достаём инструменты, без которых ничего не получится</p>
             <p>
                 Привет всем! Итак, начнём мы с установки необходимых инструментов или обозначения установленных, их заменяющих. 
             </p>
             <p>
-                1. Нам понадобится любая среда разработки: VSCode, WebStorm или что-нибудь другое. 
+                1.1. Нам понадобится любая среда разработки: VSCode, WebStorm или что-нибудь другое. 
             </p>
             <p>
-                2. GIT - обязательно. И желательно <Link link_name='GitBash' link_path='' />. Иначе придётся делать в командной строке.  Мне нравится GitBash за удобство работы с Git.
+                1.2. GIT - обязательно. И желательно <Link link_name='Git Bash' link_path='' />. Иначе придётся делать в командной строке.  Мне нравится Git Bash за удобство работы с GIT.
             </p>
         </article>
         <article className="uk-article">
-            <p className="uk-text-lead">1. Создаём стандартный html-файл.</p>
+            <p className="uk-text-lead">2. Создаём стандартный html-файл</p>
             <CardCode 
                 set_codes={
                     {
@@ -95,7 +99,8 @@ function CenterBlock() {
             </p>
         </article>
         <article className="uk-article">
-            <p className="uk-text-lead">2. Подключаем библиотеку AR.js, прописывая соответствующие теги в index.html в разделе body:</p>
+            <p className="uk-text-lead">3. Подключаем библиотеку AR.js</p>
+            <p>Прописываем подключение в разделе body:</p>
             <CardCode 
                 set_codes={
                     {
@@ -108,7 +113,7 @@ function CenterBlock() {
             />
         </article>
         <article className="uk-article">
-            <p className="uk-text-lead">3. Добавляем следующий код:</p>
+            <p className="uk-text-lead">4. Пишем AR-код</p>
             <CardCode 
                 set_codes={
                     {
@@ -117,7 +122,7 @@ function CenterBlock() {
                 }
             />
             <p>
-                Что он делает?
+                Что делает данный код?
             </p>
             <p>
                 Во-первых, <b>a-scene</b> создаёт сцену
@@ -154,40 +159,44 @@ function CenterBlock() {
             />
         </article>
         <article className="uk-article">
-            <p className="uk-text-lead uk-margin-medium-bottom">4. Теперь запускаем приложение.</p>
-            <p className="uk-margin-small-bottom">4.1. Для этого создаём репозиторий на гитхабе.</p>
+            <p className="uk-text-lead uk-margin-medium-bottom">5. Запускаем приложение</p>
+            <p className="uk-margin-small-bottom">5.1. Для этого создаём репозиторий на гитхабе</p>
             <p>
                 <p>
                     Переходим по ссылке <Link link_name="https://github.com/new" link_path="https://github.com/new" />. Заполняем <i>Repository name</i> (это название Вашего репозитория), 
                     ставим галочку на <i>Add a readme file</i> (она упростит клонирование репозитория) и нажимаем <i>Create repository</i>.
                     В итоге Вы создали пустой репозиторий для запуска Вашего AR-приложения.
                 </p>
-                <Picture picture_path={intro} picture_alt='Создание репозитория' />
+                <Picture picture_path={create_repository} picture_alt='Создание репозитория' />
             </p>
-            <p className="uk-margin-small-bottom">4.2. Клонируем репозиторий на свой ПК.</p>
-            <p>
-                <p className="uk-margin-small-bottom">
-                    Для этого формируем ссылку вида <i>https://github.com/ваш ник на гитхаб/название вашего репозитория</i> и переходим по ней. Например, у меня доступ к репозиторию и следовательно к его клонированию получился <i>https://github.com/mianger22/ar_dudar_lesson</i>.
-                </p>
-                <p>
-                    Перейдя по ссылке, мы попадаем на страницу репозитория. Далее жмём по зелёной кнопке <i>Code</i> и копируем значение из поля строки, кликнув по иконке сбоку.
-                </p>
-                <Picture picture_path={intro2} picture_alt='Скопировать код репозитория' />
-            </p>
-            <p>4.3. Теперь открываем диск С, ищем место, где будет лежать наш склонированный проект.</p>
+            <p className="uk-margin-small-bottom">5.2. Клонируем репозиторий на свой ПК</p>
             <p>
                 <p>
-                    Если решили воспользоваться GitBush, то кликаете в выбранном месте правой кнопкой, выбираете <i>open git bash here</i>, запускаете. Если же остановились на командной строке, то, кликнув правой кнопкой мыши, выбираете <i>Открыть в терминале</i>.
+                    Попав на страницу репозитория, жмём по зелёной кнопке <i>Code</i> и копируем значение из поля строки, кликнув по иконке сбоку.
+                </p>
+                <Picture picture_path={click_by_button_code} picture_alt='Нажатие кнопки Code' />
+                <Picture picture_path={copy_url} picture_alt='Копирование url' />
+            </p>
+            <p>5.3. Теперь открываем диск С, ищем место, где будет лежать наш склонированный проект</p>
+            <p>
+                <p>
+                    Если решили воспользоваться Git Bash, то кликаете в выбранном месте правой кнопкой, выбираете <i>Open Git Bash here</i>, запускаете. Если же остановились на командной строке, то, кликнув правой кнопкой мыши, выбираете <i>Открыть в терминале</i>.
                 </p>
                 <p>
                     Вводите <i>git clone</i> и нажимаете комбинацию Shift+Insert, чтобы вставилась скопированная строка с github`a, затем - Enter.
                 </p>
-                <Picture picture_path={gitclone} picture_alt='Клонируем папку' />
-            </p>
-            <p>4.4. Теперь переходим в склонированную папку и скидываем туда наш index.html.</p>
-            <p>
                 <p>
-                    После - открываем git bash или командную строку, если уже закрыли, если нет, то вводим <i>cd наименование склонированной папки</i>, а после - копируем и Enter`ом запускаем следующие команды: 
+                    <u>* Открытый терминал не закрывайте!</u>
+                </p>
+                <Picture picture_path={open_gitbash} picture_alt='Открытие Git Bash' />
+            </p>
+            <p>5.4. Теперь нужно залить наш index.html на GitHub</p>
+            <p className="mb-6">
+                <p>
+                    Для этого вводим <u><b>cd</b> наименование Вашей склонированной папки</u>, в следствие чего Вы попадёте в склонированную папку. Затем бросаем в неё наш index.html.
+                </p>
+                <p>
+                    Теперь копируете в терминал следующие команды и нажимаете Enter:
                 </p>
                 <CardCode 
                     set_codes={
@@ -196,6 +205,7 @@ function CenterBlock() {
                         }
                     }
                 />
+                <Picture picture_path={success_push} picture_alt='Успешное сохранение проекта на GitHub`е' />                
                 <p className="uk-margin-small-bottom">
                     Что они делают?
                 </p>
@@ -205,7 +215,7 @@ function CenterBlock() {
                             а) <b>git add --all</b> добавляет все изменения в отслеживаемые
                         </li>
                         <li>
-                            б) <b>git commit -m "my first commit"</b> коммитит их
+                            б) <b>git commit -m "my first commit"</b> сохраняет теперь уже отслеживаемые изменения
                         </li>
                         <li>
                             в) <b>git push</b> отправляет (сохраняет) изменения (наш код) на GitHub 
@@ -216,28 +226,30 @@ function CenterBlock() {
                     Ура! Наш код сохранён. И мы его не потеряем в случае утраты компьютера. 
                 </p>
             </p>
-            <p className="uk-margin-small-bottom">4.5. Теперь запускаем наш проект, включив github pages.</p>
+            <p className="uk-margin-small-bottom">5.5. Теперь запускаем наш проект, включив GitHub Pages</p>
             <p>
                 <p>Для этого:</p>
-                <p>4.5.1. Заходим в настройки проекта, как на скриншоте</p>
-
-                <p>4.5.2. Далее мы включаем данную настройку, чтобы у нас запустился сервис</p>
-                <p className="uk-margin-small-top">Готово!</p>
+                <p>а) Заходим в настройки проекта</p>
+                <Picture picture_path={opening_project_settings} picture_alt='Открытие настроек проекта' />
+                <p>б) Открываем в левом блоке вкладку Pages</p>
+                <Picture picture_path={opening_pages_tab} picture_alt='Открытие вкладки Pages' />
+                <p>в) Меняем branch с none на main и нажимаем save</p>
+                <Picture picture_path={changing_GitHub_Pages_parameters} picture_alt='Изменение параметров GitHub Pages' />
             </p>
         </article>
         <article className="uk-article">
-            <p className="uk-text-lead uk-margin-medium-bottom">5. Теперь смотрим - заработало ли приложение.</p>
+            <p className="uk-text-lead uk-margin-medium-bottom">6. Наслаждаемся результатом</p>
             <p>
                 Для этого 
             </p>
             <p>
-                5.1. создаём адрес в соответствие с шаблоном - - , где это - ваш ник на гитхаб, а это - имя репозитория. Сохраняем данный адрес, заливаем его в мессенджер, используемый Вами. Например, в телеграмм. 
+                6.1. создаём адрес в соответствие с шаблоном - - , где это - ваш ник на гитхаб, а это - имя репозитория. Сохраняем данный адрес, заливаем его в мессенджер, используемый Вами. Например, в телеграмм. 
             </p>
             <p>
-                5.2. Заходим с телефона по нему. Вуаля! <b>Наше приложение запущено!</b> тут анимация или смайл
+                6.2. Заходим с телефона по нему. Вуаля! <b>Наше приложение запущено!</b> тут анимация или смайл
             </p>
             <p className="uk-margin-medium-bottom">
-                5.3. Теперь наводим камерой на следующий маркер (мы его указывали в коде командой ..)
+                6.3. Теперь наводим камерой на следующий маркер (мы его указывали в коде командой ..)
             </p>
             <Picture picture_path="https://leonardo.osnova.io/af634cb0-038a-5245-8169-385adf3fb9ad/-/preview/1000/-/format/webp/" picture_alt='AR-метка' />
             <p className="uk-margin-medium-top">
