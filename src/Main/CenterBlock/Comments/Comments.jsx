@@ -91,7 +91,7 @@ function Comments() {
                                     .catch(function (error) {
                                         alert("Ошибка! Детали - в консоли");
 
-                                        // console.clear();
+                                        console.clear();
                                         console.log(` Ошибка обращения по адресу: ${error} `);
                                     })
                                     .finally(function () {
