@@ -37,17 +37,26 @@ function Comments() {
             <Formik
                 initialValues={{ user_name: "", comment: "" }}
                 onSubmit = {(values, { resetForm }) => {
-                    // сохраняем текущую дату
-                    const currentDate = JSON.stringify(new Date(2011, 0, 1, 0, 0, 0, 0));
+                    // получаем объект даты
+                    const current_date_obj = new Date(); 
 
+                    // сохраняем текущую дату
+                    const current_date_and_time = 
+                        current_date_obj.getDate() + "/" + 
+                        (current_date_obj.getMonth() + 1)  + "/" + 
+                        current_date_obj.getFullYear() + " @ " + 
+                        current_date_obj.getHours() + ":" + 
+                        current_date_obj.getMinutes();
+
+                    // формируем объект данных нового комментария
                     const data_new_comment = {
                         id: comments_list.length === undefined ? 1 : comments_list.length + 1,
                         user_name: values.user_name, 
-                        time_comment_creation: JSON.parse(currentDate),
+                        time_comment_creation: current_date_and_time,
                         comment: values.comment
                     }
 
-                    // сохраняем имя пользователя, его комментарий и время создания комментария
+                    // сохраняем данный объект
                     set_comments_list(data_new_comment);
 
                     // сохраняем в Базу Данных новый комментарий
@@ -58,10 +67,11 @@ function Comments() {
                             })
                                 .then(function (response) {
                                     // Показываем сообщение об успехе
-                                    alert(response);
+                                    alert(response.data);
                                 })
                                 .catch(function (error) {
                                     alert("Ошибка! Детали - в консоли");
+
                                     console.clear();
                                     console.log(` Ошибка обращения по адресу: ${error} `);
                                 })
@@ -69,7 +79,7 @@ function Comments() {
                                     // always executed
                                 });  
                         } catch (error) {
-                            console.error("00"+error);
+                            console.error(`Ошибка сохранения комментария: ${error}`);
                         }
                     };
             
