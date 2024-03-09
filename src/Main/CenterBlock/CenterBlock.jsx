@@ -313,7 +313,7 @@ function CenterBlock() {
             </article>
 
             <article className="uk-article uk-margin-large-bottom">          
-                2 место для комментариев контакты для связи со мной -тг группа и подписаться на неё
+                3 место для комментариев контакты для связи со мной -тг группа и подписаться на неё
 
                 {/* <div id="anycomment-app"></div> */}
                 <div id="sigCommentsBlock"></div>
