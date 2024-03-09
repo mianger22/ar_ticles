@@ -10,7 +10,7 @@ import changing_GitHub_Pages_parameters from "../../Pictures/changing_GitHub_Pag
 import CardCode from "../../Common/CardCode";
 import Link from "../../Common/Link";
 import Picture from "../../Common/Picture";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 // import { 
 //     Article,
@@ -62,9 +62,15 @@ const Codes = {
 }
 
 function CenterBlock() {
+    const [ , ] = useState();
+
     useEffect(() => {
               
     });
+
+    const send_comment = () => {
+
+    };
 
     return (
         <div>
@@ -304,7 +310,7 @@ function CenterBlock() {
                             <textarea className="uk-textarea" rows="5" placeholder="Ваш комментарий" aria-label="Comment"></textarea>
                         </div>
 
-                        <button class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom">Ответить</button>
+                        <button class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom" onClick={send_comment}>Ответить</button>
                     </fieldset>
                 </form>
 
