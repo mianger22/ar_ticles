@@ -291,10 +291,6 @@ function CenterBlock() {
             </article>
 
             <article className="uk-article uk-margin-large-bottom">          
-                4 место для комментариев контакты для связи со мной -тг группа и подписаться на неё
-
-                Создать
-
                 <form className="uk-margin-medium-top uk-margin-medium-bottom">
                     <fieldset className="uk-fieldset">
 

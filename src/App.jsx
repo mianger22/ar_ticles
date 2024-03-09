@@ -1,3 +1,4 @@
+import Footer from './Footer/Footer';
 import Main from './Main/Main';
 
 function App() {
@@ -5,7 +6,7 @@ function App() {
     <>
       <header></header>
       <Main />      
-      <footer></footer>
+      <Footer />
     </>
   );
 }
