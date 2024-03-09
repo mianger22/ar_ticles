@@ -265,8 +265,8 @@ function CenterBlock() {
             </p>
         </article>
         <article className="uk-article uk-margin-large-bottom">
-            <p className="uk-text-lead uk-margin-medium-bottom">Список рекомендуемых к прочтению источников об AR</p>
-            <p class="uk-article-meta">Все они были использованы мною для создания своего первого работающего приложения на AR и написаия данной статьи</p>
+            <p className="uk-text-lead">Список рекомендуемых к прочтению источников об AR</p>
+            <p class="uk-article-meta uk-margin-small-top uk-margin-medium-bottom">Все они были использованы мною для создания своего первого работающего приложения на AR и написаия данной статьи</p>
             <p>
                 <ul>
                     <li>
@@ -285,7 +285,9 @@ function CenterBlock() {
             </p>
         </article>
 
-        место для комментариев контакты для связи со мной -тг группа и подписаться на неё
+        <article className="uk-article uk-margin-large-bottom">
+            место для комментариев контакты для связи со мной -тг группа и подписаться на неё
+        </article>
     </div>
   );
 }
