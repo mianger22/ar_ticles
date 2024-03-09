@@ -86,6 +86,10 @@ function CenterBlock() {
         //     var ss = document.getElementsByTagName('script')[0]; 
         //     ss.parentNode.insertBefore(script, ss);
         // })();
+       
+        var idcomments_acct = 'd577dde156dac3cc8a66086bacafcfac';
+        var idcomments_post_id;
+        var idcomments_post_url;
     });
 
     return (
@@ -316,7 +320,7 @@ function CenterBlock() {
                 3 место для комментариев контакты для связи со мной -тг группа и подписаться на неё
 
                 {/* <div id="anycomment-app"></div> */}
-                <div id="sigCommentsBlock"></div>
+                {/* <div id="sigCommentsBlock"></div>
                 <a href="http://sigcomments.com" style="font-size: 0.6em;">Система комментирования SigComments</a>
                 
                 <script type="text/javascript">
@@ -329,7 +333,13 @@ function CenterBlock() {
                         var ss = document.getElementsByTagName('script')[0]; 
                         ss.parentNode.insertBefore(script, ss);
                     })()}
-                </script>
+                </script> */}
+
+                <span id="IDCommentsPostTitle" style="display:none"></span>
+                <script type='text/javascript' src='https://www.intensedebate.com/js/genericCommentWrapperV2.js'></script>
+
+                <script type="text/javascript" src="https://www.intensedebate.com/js/genericLinkWrapperV2.js"></script>
+     
             </article>
         </div>
     );
