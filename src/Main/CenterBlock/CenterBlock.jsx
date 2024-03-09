@@ -77,15 +77,15 @@ function CenterBlock() {
         // sa.parentNode.insertBefore(s, s.nextSibling);
 
         
-        (function(){
-            var host_id = '7272';
-            var script = document.createElement('script');
-            script.type = 'text/javascript';
-            script.async = true;
-            script.src = '//sigcomments.com/chat/?host_id='+host_id;
-            var ss = document.getElementsByTagName('script')[0]; 
-            ss.parentNode.insertBefore(script, ss);
-        })();
+        // (function(){
+        //     var host_id = '7272';
+        //     var script = document.createElement('script');
+        //     script.type = 'text/javascript';
+        //     script.async = true;
+        //     script.src = '//sigcomments.com/chat/?host_id='+host_id;
+        //     var ss = document.getElementsByTagName('script')[0]; 
+        //     ss.parentNode.insertBefore(script, ss);
+        // })();
     });
 
     return (
@@ -319,6 +319,17 @@ function CenterBlock() {
                 <div id="sigCommentsBlock"></div>
                 <a href="http://sigcomments.com" style="font-size: 0.6em;">Система комментирования SigComments</a>
                 
+                <script type="text/javascript">
+                    {(function(){
+                        var host_id = '7272';
+                        var script = document.createElement('script');
+                        script.type = 'text/javascript';
+                        script.async = true;
+                        script.src = '//sigcomments.com/chat/?host_id='+host_id;
+                        var ss = document.getElementsByTagName('script')[0]; 
+                        ss.parentNode.insertBefore(script, ss);
+                    })()}
+                </script>
             </article>
         </div>
     );
