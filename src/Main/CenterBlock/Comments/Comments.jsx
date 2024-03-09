@@ -14,9 +14,10 @@ function Comments() {
             try {
                 await axios.get(url_resourse)
                     .then(function (response) {
-                        // Полученные комментарии с сервера сохраняем в переменную comments_list, 
+                        // Полученные комментарии с сервера сортируем и сохраняем в переменную comments_list, 
                         // в следствие чего пользователь увидит все комментарии сайта
-                        set_comments_list(response.data)
+                        const server_comments_list = response.data.sort((a, b) => b.id_comment - a.id_comment);
+                        set_comments_list(server_comments_list);
                     })
                     .catch(function (error) {
                         console.log(` Ошибка обращения по адресу: ${error} `);
