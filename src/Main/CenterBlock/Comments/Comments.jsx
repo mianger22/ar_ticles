@@ -63,7 +63,7 @@ function Comments() {
                     async function saveComment() {
                         try {
                             await axios.post(url_resourse, {
-                                "user_name": values.user_name, "comment": values.comment, "date_creation": currentDate
+                                "user_name": values.user_name, "comment": values.comment, "date_creation": current_date_and_time
                             })
                                 .then(function (response) {
                                     // Показываем сообщение об успехе
