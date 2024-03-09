@@ -1,27 +1,25 @@
 import { Formik, Form, Field } from "formik";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import Comment from "./Comment";
 
 function Comments() {
-    const [user_name, set_user_name] = useState("");
-    const [comment, set_comment] = useState("");
-    const [time_comment_creation, set_time_comment_creation] = useState("");
-
-    useEffect(() => {
-              
-    });
+    const [comments_list, set_comments_list] = useState([]);
 
     return (
         <article className="uk-article uk-margin-large-bottom">
             <Formik
                 initialValues={{ user_name: "", comment: "" }}
-                onSubmit={({ setSubmitting, user_name, comment }) => {
+                onSubmit = {(values, { resetForm }) => {
                     // сохраняем имя пользователя, его комментарий и время создания комментария
-                    set_user_name(user_name);
-                    set_comment(comment);
-                    set_time_comment_creation(JSON.stringify(new Date(2011, 0, 1, 0, 0, 0, 0)));
+                    set_comments_list([...comments_list, {
+                        id: comments_list.length + 1,
+                        user_name: values.user_name, 
+                        time_comment_creation: JSON.stringify(new Date(2011, 0, 1, 0, 0, 0, 0)),
+                        comment: values.comment
+                    }]);
 
-                    // отменяем отправку
-                    setSubmitting(false);
+                    // очищаем поля
+                    resetForm({});
                 }}
             >
                 {() => (
@@ -30,7 +28,6 @@ function Comments() {
                             <legend className="uk-legend">Ваш комментарий</legend>
 
                             <div className="form-group uk-margin">
-                                <input className="" type="text"  />
                                 <Field
                                     type="text"
                                     name="user_name"
@@ -56,25 +53,14 @@ function Comments() {
                 )}
             </Formik>          
 
-            {user_name && <article className="uk-comment uk-comment-primary" role="comment">
-                <header className="uk-comment-header">
-                    <div className="uk-grid-medium uk-flex-middle" uk-grid>
-                        <div className="uk-width-auto">
-                            <img className="uk-comment-avatar" src="https://getuikit.com/docs/images/avatar.jpg" width="80" height="80" alt="" />
-                        </div>
-                        <div className="uk-width-expand">
-                            <h4 className="uk-comment-title uk-margin-remove"><a className="uk-link-reset" href="#">{user_name}</a></h4>
-                            <ul className="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
-                                <li><a href="#">{time_comment_creation}</a></li>
-                                <li><a href="#">Ответить</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </header>
-                <div className="uk-comment-body">
-                    <p>{comment}</p>
-                </div>
-            </article>}
+            {comments_list.map(
+                data_comment => <Comment 
+                    key={data_comment.id}
+                    user_name={data_comment.user_name}
+                    time_comment_creation={data_comment.time_comment_creation}
+                    comment={data_comment.comment}
+                />
+            )}
         </article>
     )
 }
