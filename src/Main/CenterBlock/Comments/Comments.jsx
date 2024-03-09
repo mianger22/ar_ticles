@@ -57,7 +57,7 @@ function Comments() {
                     }
 
                     // сохраняем данный объект
-                    set_comments_list(data_new_comment);
+                    set_comments_list([...comments_list, data_new_comment]);
 
                     // сохраняем в Базу Данных новый комментарий
                     async function saveComment() {
@@ -67,7 +67,7 @@ function Comments() {
                             })
                                 .then(function (response) {
                                     // Показываем сообщение об успехе
-                                    alert(response.data);
+                                    // alert(response.data);
                                 })
                                 .catch(function (error) {
                                     alert("Ошибка! Детали - в консоли");
