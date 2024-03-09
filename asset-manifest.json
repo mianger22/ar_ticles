@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.js": "/ar_ticles/static/js/main.c156f911.js",
+    "static/js/453.bf763991.chunk.js": "/ar_ticles/static/js/453.bf763991.chunk.js",
+    "static/media/success_push.jpg": "/ar_ticles/static/media/success_push.488e03a59faee6c741af.jpg",
+    "static/media/opening_pages_tab.jpg": "/ar_ticles/static/media/opening_pages_tab.fe24f603c07eeac78d99.jpg",
+    "static/media/changing_GitHub_Pages_parameters.jpg": "/ar_ticles/static/media/changing_GitHub_Pages_parameters.72d4c60a81105529d148.jpg",
+    "static/media/create_repository.jpg": "/ar_ticles/static/media/create_repository.132053a8c0d19207b1b6.jpg",
+    "static/media/opening_project_settings.jpg": "/ar_ticles/static/media/opening_project_settings.ba89875050bbf93351f1.jpg",
+    "static/media/copy_url.jpg": "/ar_ticles/static/media/copy_url.7638fc140b456758f3a9.jpg",
+    "static/media/click_by_button_code.jpg": "/ar_ticles/static/media/click_by_button_code.a37c25e6e6da79328d53.jpg",
+    "static/media/open_gitbash.jpg": "/ar_ticles/static/media/open_gitbash.0f5aaa01773a422228bf.jpg",
+    "index.html": "/ar_ticles/index.html",
+    "main.c156f911.js.map": "/ar_ticles/static/js/main.c156f911.js.map",
+    "453.bf763991.chunk.js.map": "/ar_ticles/static/js/453.bf763991.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.c156f911.js"
+  ]
+}
