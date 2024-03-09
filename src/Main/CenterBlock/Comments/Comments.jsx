@@ -41,24 +41,31 @@ function Comments() {
                     // получаем объект даты
                     const current_date_obj = new Date(); 
 
+                    const current_day = current_date_obj.getDate();
+                    const current_month = Number(current_date_obj.getMonth()) + 1;
+                    const year = current_date_obj.getFullYear();
+                    const current_hour = current_date_obj.getHours();
+                    const current_minute = current_date_obj.getMinutes()
+
+                    // разделяем его на нужные нам составляющие
+                    const day = current_day < 10 ? "0" + current_day : current_day;
+                    const month = current_month < 10 ? "0" + current_month : current_month;
+                    const hour = current_hour < 10 ? "0" + current_hour : current_hour;
+                    const minute = current_minute < 10 ? "0" + current_minute : current_minute;
+
                     // сохраняем текущую дату
-                    const current_date_and_time = 
-                        current_date_obj.getDate() + "/" + 
-                        (current_date_obj.getMonth() + 1)  + "/" + 
-                        current_date_obj.getFullYear() + " " + 
-                        current_date_obj.getHours() + ":" + 
-                        current_date_obj.getMinutes();
+                    const current_date_and_time = `${hour}:${minute} ${day}.${month}.${year}`;
 
                     // формируем объект данных нового комментария
                     const data_new_comment = {
                         id: comments_list.length === undefined ? 1 : comments_list.length + 1,
                         user_name: values.user_name, 
-                        time_comment_creation: current_date_and_time,
+                        date_creation: current_date_and_time,
                         comment: values.comment
                     }
 
                     // сохраняем данный объект
-                    set_comments_list([...comments_list, data_new_comment]);
+                    set_comments_list([data_new_comment, ...comments_list]);
 
                     // сохраняем в Базу Данных новый комментарий
                     async function saveComment() {
