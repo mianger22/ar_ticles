@@ -285,18 +285,8 @@ function CenterBlock() {
             </p>
         </article>
 
-        <article className="uk-article uk-margin-large-bottom">
-            <script>
-                var idcomments_acct = 'd577dde156dac3cc8a66086bacafcfac';
-                var idcomments_post_id;
-                var idcomments_post_url;
-            </script>
-            <span id="IDCommentsPostTitle" style="display:none"></span>
-            <script type='text/javascript' src='https://www.intensedebate.com/js/genericCommentWrapperV2.js'></script>
-            
-            <script type="text/javascript" src="https://www.intensedebate.com/js/genericLinkWrapperV2.js"></script>
-            
-            место для комментариев контакты для связи со мной -тг группа и подписаться на неё
+        <article className="uk-article uk-margin-large-bottom">          
+            2 место для комментариев контакты для связи со мной -тг группа и подписаться на неё
         </article>
     </div>
   );
