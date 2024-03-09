@@ -63,33 +63,7 @@ const Codes = {
 
 function CenterBlock() {
     useEffect(() => {
-        // var AnyComment;
-        
-        // AnyComment = window.AnyComment || []; AnyComment.Comments = [];
-        // AnyComment.Comments.push({
-        //     "root": "anycomment-app",
-        //     "app_id": 6253,
-        //     "language": "ru"
-        // })
-        // var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
-        // s.src = "https://widget.anycomment.io/comment/embed.js";
-        // var sa = document.getElementsByTagName("script")[0];
-        // sa.parentNode.insertBefore(s, s.nextSibling);
-
-        
-        // (function(){
-        //     var host_id = '7272';
-        //     var script = document.createElement('script');
-        //     script.type = 'text/javascript';
-        //     script.async = true;
-        //     script.src = '//sigcomments.com/chat/?host_id='+host_id;
-        //     var ss = document.getElementsByTagName('script')[0]; 
-        //     ss.parentNode.insertBefore(script, ss);
-        // })();
-       
-        var idcomments_acct = 'd577dde156dac3cc8a66086bacafcfac';
-        var idcomments_post_id;
-        var idcomments_post_url;
+              
     });
 
     return (
@@ -297,7 +271,7 @@ function CenterBlock() {
             </article>
             <article className="uk-article uk-margin-large-bottom">
                 <p className="uk-text-lead">Список рекомендуемых к прочтению источников об AR</p>
-                <p class="uk-article-meta uk-margin-small-top uk-margin-medium-bottom">Все они были использованы мною для создания своего первого работающего приложения на AR и написаия данной статьи</p>
+                <p className="uk-article-meta uk-margin-small-top uk-margin-medium-bottom">Все они были использованы мною для создания своего первого работающего приложения на AR и написаия данной статьи</p>
                 <p>
                     <ul>
                         <li>
@@ -319,27 +293,44 @@ function CenterBlock() {
             <article className="uk-article uk-margin-large-bottom">          
                 4 место для комментариев контакты для связи со мной -тг группа и подписаться на неё
 
-                {/* <div id="anycomment-app"></div> */}
-                {/* <div id="sigCommentsBlock"></div>
-                <a href="http://sigcomments.com" style="font-size: 0.6em;">Система комментирования SigComments</a>
-                
-                <script type="text/javascript">
-                    {(function(){
-                        var host_id = '7272';
-                        var script = document.createElement('script');
-                        script.type = 'text/javascript';
-                        script.async = true;
-                        script.src = '//sigcomments.com/chat/?host_id='+host_id;
-                        var ss = document.getElementsByTagName('script')[0]; 
-                        ss.parentNode.insertBefore(script, ss);
-                    })()}
-                </script> */}
+                Создать
 
-                <span id="IDCommentsPostTitle" style="display:none"></span>
-                <script type='text/javascript' src='https://www.intensedebate.com/js/genericCommentWrapperV2.js'></script>
+                <form className="uk-margin-medium-top uk-margin-medium-bottom">
+                    <fieldset className="uk-fieldset">
 
-                <script type="text/javascript" src="https://www.intensedebate.com/js/genericLinkWrapperV2.js"></script> 
-     
+                        <legend className="uk-legend">Ваш комментарий</legend>
+
+                        <div className="uk-margin">
+                            <input className="uk-input" type="text" placeholder="Ваше имя" aria-label="UserName" />
+                        </div>
+
+                        <div className="uk-margin">
+                            <textarea className="uk-textarea" rows="5" placeholder="Ваш комментарий" aria-label="Comment"></textarea>
+                        </div>
+
+                        <button class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom">Ответить</button>
+                    </fieldset>
+                </form>
+
+                <article className="uk-comment uk-comment-primary" role="comment">
+                    <header className="uk-comment-header">
+                        <div className="uk-grid-medium uk-flex-middle" uk-grid>
+                            <div className="uk-width-auto">
+                                <img className="uk-comment-avatar" src="https://getuikit.com/docs/images/avatar.jpg" width="80" height="80" alt="" />
+                            </div>
+                            <div className="uk-width-expand">
+                                <h4 className="uk-comment-title uk-margin-remove"><a className="uk-link-reset" href="#">Author</a></h4>
+                                <ul className="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
+                                    <li><a href="#">12 days ago</a></li>
+                                    <li><a href="#">Reply</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </header>
+                    <div className="uk-comment-body">
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </article>
             </article>
         </div>
     );
