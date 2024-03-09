@@ -39,7 +39,7 @@ function Comments() {
         if (!value) {
             error = 'Required';
         } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)) {
-            error = 'Invalid email address';
+            error = 'Неверный email адрес';
         }
 
         return error;
@@ -50,7 +50,7 @@ function Comments() {
             <Formik
                 initialValues={{ user_name: "", comment: "", user_mail: "" }}
                 onSubmit = {(values, { resetForm }) => {
-                    if (values.length === 3) {
+                    if (Object.keys(values).length === 3) {
                         // получаем объект даты
                         const current_date_obj = new Date(); 
 
@@ -71,7 +71,7 @@ function Comments() {
 
                         // формируем объект данных нового комментария
                         const data_new_comment = {
-                            id: comments_list.length === undefined ? 1 : comments_list.length + 1,
+                            id_comment: comments_list.length === undefined ? 1 : comments_list.length + 1,
                             user_name: values.user_name, 
                             date_creation: current_date_and_time,
                             comment: values.comment,
@@ -84,16 +84,14 @@ function Comments() {
                         // сохраняем в Базу Данных новый комментарий
                         async function saveComment() {
                             try {
-                                await axios.post(url_resourse, {
-                                    "user_name": values.user_name, "comment": values.comment, "date_creation": current_date_and_time
-                                })
+                                await axios.post(url_resourse, data_new_comment)
                                     .then(function (response) {
 
                                     })
                                     .catch(function (error) {
                                         alert("Ошибка! Детали - в консоли");
 
-                                        console.clear();
+                                        // console.clear();
                                         console.log(` Ошибка обращения по адресу: ${error} `);
                                     })
                                     .finally(function () {
