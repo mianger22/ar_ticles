@@ -44,7 +44,7 @@ function Comments() {
                     const current_date_and_time = 
                         current_date_obj.getDate() + "/" + 
                         (current_date_obj.getMonth() + 1)  + "/" + 
-                        current_date_obj.getFullYear() + " @ " + 
+                        current_date_obj.getFullYear() + " " + 
                         current_date_obj.getHours() + ":" + 
                         current_date_obj.getMinutes();
 
