@@ -61,7 +61,8 @@ function Comments() {
                         id: comments_list.length === undefined ? 1 : comments_list.length + 1,
                         user_name: values.user_name, 
                         date_creation: current_date_and_time,
-                        comment: values.comment
+                        comment: values.comment,
+                        user_mail: values.user_mail
                     }
 
                     // сохраняем данный объект
@@ -74,8 +75,7 @@ function Comments() {
                                 "user_name": values.user_name, "comment": values.comment, "date_creation": current_date_and_time
                             })
                                 .then(function (response) {
-                                    // Показываем сообщение об успехе
-                                    // alert(response.data);
+
                                 })
                                 .catch(function (error) {
                                     alert("Ошибка! Детали - в консоли");
@@ -99,8 +99,12 @@ function Comments() {
             >
                 {() => (
                     <Form className="uk-margin-medium-top uk-margin-medium-bottom">
-                        <fieldset className="uk-fieldset">
-                            <legend className="uk-legend">Ваш комментарий</legend>
+                        <fieldset className="uk-fieldset uk-margin-small-bottom">
+                            <div className="uk-text-large flex items-center justify-center uk-margin-medium-bottom">
+                                <legend>
+                                    Если что-то непонятно, спрашивайте - помогу
+                                </legend>
+                            </div>
 
                             <div className="form-group uk-margin">
                                 <Field
@@ -114,15 +118,26 @@ function Comments() {
 
                             <div className="form-group uk-margin">
                                 <Field
+                                    type="email"
+                                    name="user_mail"
+                                    className="form-control uk-input"
+                                    placeholder="Ваша почта" 
+                                    aria-label="user_mail"
+                                />
+                            </div>
+
+                            <div className="form-group uk-margin">
+                                <Field
                                     type="textarea"
                                     name="comment"
                                     className="form-control uk-textarea"
                                     rows="5" 
-                                    placeholder="Ваш комментарий" 
+                                    placeholder="Ваш вопрос" 
                                     aria-label="comment"
                                 />
                             </div>
                         </fieldset>
+
                         <button class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom">Ответить</button>
                     </Form>
                 )}
@@ -135,7 +150,9 @@ function Comments() {
                     time_comment_creation={data_comment.date_creation}
                     comment={data_comment.comment}
                 />
-            ) : " Будьте первым, кто оставит комментарий "}
+            ) : <p className="uk-text-lighter italic flex items-center justify-center mb-6">
+                Будьте первым, кто оставит комментарий
+            </p>}
         </article>
     )
 }
