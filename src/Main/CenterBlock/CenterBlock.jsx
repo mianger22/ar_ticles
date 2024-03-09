@@ -10,7 +10,7 @@ import changing_GitHub_Pages_parameters from "../../Pictures/changing_GitHub_Pag
 import CardCode from "../../Common/CardCode";
 import Link from "../../Common/Link";
 import Picture from "../../Common/Picture";
-import { useEffect, useState } from "react";
+import Comments from "./Comments/Comments";
 
 // import { 
 //     Article,
@@ -62,16 +62,6 @@ const Codes = {
 }
 
 function CenterBlock() {
-    const [ , ] = useState();
-
-    useEffect(() => {
-              
-    });
-
-    const send_comment = () => {
-
-    };
-
     return (
         <div>
             <div className="flex items-center justify-center my-6">
@@ -296,44 +286,7 @@ function CenterBlock() {
                 </p>
             </article>
 
-            <article className="uk-article uk-margin-large-bottom">          
-                <form className="uk-margin-medium-top uk-margin-medium-bottom">
-                    <fieldset className="uk-fieldset">
-
-                        <legend className="uk-legend">Ваш комментарий</legend>
-
-                        <div className="uk-margin">
-                            <input className="uk-input" type="text" placeholder="Ваше имя" aria-label="UserName" />
-                        </div>
-
-                        <div className="uk-margin">
-                            <textarea className="uk-textarea" rows="5" placeholder="Ваш комментарий" aria-label="Comment"></textarea>
-                        </div>
-
-                        <button class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom" onClick={send_comment}>Ответить</button>
-                    </fieldset>
-                </form>
-
-                <article className="uk-comment uk-comment-primary" role="comment">
-                    <header className="uk-comment-header">
-                        <div className="uk-grid-medium uk-flex-middle" uk-grid>
-                            <div className="uk-width-auto">
-                                <img className="uk-comment-avatar" src="https://getuikit.com/docs/images/avatar.jpg" width="80" height="80" alt="" />
-                            </div>
-                            <div className="uk-width-expand">
-                                <h4 className="uk-comment-title uk-margin-remove"><a className="uk-link-reset" href="#">Author</a></h4>
-                                <ul className="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
-                                    <li><a href="#">12 days ago</a></li>
-                                    <li><a href="#">Reply</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </header>
-                    <div className="uk-comment-body">
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-                    </div>
-                </article>
-            </article>
+            <Comments />
         </div>
     );
 }
