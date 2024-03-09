@@ -63,6 +63,8 @@ const Codes = {
 
 function CenterBlock() {
     useEffect(() => {
+        var AnyComment;
+        
         AnyComment = window.AnyComment || []; AnyComment.Comments = [];
         AnyComment.Comments.push({
             "root": "anycomment-app",
@@ -74,7 +76,7 @@ function CenterBlock() {
         var sa = document.getElementsByTagName("script")[0];
         sa.parentNode.insertBefore(s, s.nextSibling);
     });
-    
+
     return (
         <div>
             <div className="flex items-center justify-center my-6">
