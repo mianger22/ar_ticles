@@ -294,6 +294,8 @@ function CenterBlock() {
             <span id="IDCommentsPostTitle" style="display:none"></span>
             <script type='text/javascript' src='https://www.intensedebate.com/js/genericCommentWrapperV2.js'></script>
             
+            <script type="text/javascript" src="https://www.intensedebate.com/js/genericLinkWrapperV2.js"></script>
+            
             место для комментариев контакты для связи со мной -тг группа и подписаться на неё
         </article>
     </div>
