@@ -1,7 +1,8 @@
 import { Formik, Form, Field } from "formik";
 import { useEffect, useState } from "react";
 import Comment from "./Comment";
-const axios = require('axios');
+import axios from "axios";
+
 const url_resourse = "http://localhost:80/comments";
 
 function Comments() {
@@ -15,7 +16,7 @@ function Comments() {
                     .then(function (response) {
                         // Полученные комментарии с сервера сохраняем в переменную comments_list, 
                         // в следствие чего пользователь увидит все комментарии сайта
-                        set_comments_list(response)
+                        set_comments_list(response.data)
                     })
                     .catch(function (error) {
                         console.log(` Ошибка обращения по адресу: ${error} `);
@@ -29,7 +30,7 @@ function Comments() {
         };
 
         getComments();
-    })
+    }, []);
 
     return (
         <article className="uk-article uk-margin-large-bottom">
@@ -39,13 +40,15 @@ function Comments() {
                     // сохраняем текущую дату
                     const currentDate = JSON.stringify(new Date(2011, 0, 1, 0, 0, 0, 0));
 
-                    // сохраняем имя пользователя, его комментарий и время создания комментария
-                    set_comments_list([...comments_list, {
-                        id: comments_list.length + 1,
+                    const data_new_comment = {
+                        id: comments_list.length === undefined ? 1 : comments_list.length + 1,
                         user_name: values.user_name, 
-                        time_comment_creation: currentDate,
+                        time_comment_creation: JSON.parse(currentDate),
                         comment: values.comment
-                    }]);
+                    }
+
+                    // сохраняем имя пользователя, его комментарий и время создания комментария
+                    set_comments_list(data_new_comment);
 
                     // сохраняем в Базу Данных новый комментарий
                     async function saveComment() {
@@ -66,7 +69,7 @@ function Comments() {
                                     // always executed
                                 });  
                         } catch (error) {
-                            console.error(error);
+                            console.error("00"+error);
                         }
                     };
             
@@ -105,16 +108,16 @@ function Comments() {
                         <button class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom">Ответить</button>
                     </Form>
                 )}
-            </Formik>          
+            </Formik>         
 
-            {comments_list.map(
+            {comments_list.length > 0 ? comments_list.map(
                 data_comment => <Comment 
-                    key={data_comment.id}
+                    key={data_comment.id_comment}
                     user_name={data_comment.user_name}
-                    time_comment_creation={data_comment.time_comment_creation}
+                    time_comment_creation={data_comment.date_creation}
                     comment={data_comment.comment}
                 />
-            )}
+            ) : " Будьте первым, кто оставит комментарий "}
         </article>
     )
 }
