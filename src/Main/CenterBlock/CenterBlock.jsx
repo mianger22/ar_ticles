@@ -63,18 +63,29 @@ const Codes = {
 
 function CenterBlock() {
     useEffect(() => {
-        var AnyComment;
+        // var AnyComment;
         
-        AnyComment = window.AnyComment || []; AnyComment.Comments = [];
-        AnyComment.Comments.push({
-            "root": "anycomment-app",
-            "app_id": 6253,
-            "language": "ru"
-        })
-        var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
-        s.src = "https://widget.anycomment.io/comment/embed.js";
-        var sa = document.getElementsByTagName("script")[0];
-        sa.parentNode.insertBefore(s, s.nextSibling);
+        // AnyComment = window.AnyComment || []; AnyComment.Comments = [];
+        // AnyComment.Comments.push({
+        //     "root": "anycomment-app",
+        //     "app_id": 6253,
+        //     "language": "ru"
+        // })
+        // var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
+        // s.src = "https://widget.anycomment.io/comment/embed.js";
+        // var sa = document.getElementsByTagName("script")[0];
+        // sa.parentNode.insertBefore(s, s.nextSibling);
+
+        
+        (function(){
+            var host_id = '7272';
+            var script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.async = true;
+            script.src = '//sigcomments.com/chat/?host_id='+host_id;
+            var ss = document.getElementsByTagName('script')[0]; 
+            ss.parentNode.insertBefore(script, ss);
+        })();
     });
 
     return (
@@ -304,7 +315,10 @@ function CenterBlock() {
             <article className="uk-article uk-margin-large-bottom">          
                 2 место для комментариев контакты для связи со мной -тг группа и подписаться на неё
 
-                <div id="anycomment-app"></div>
+                {/* <div id="anycomment-app"></div> */}
+                <div id="sigCommentsBlock"></div>
+                <a href="http://sigcomments.com" style="font-size: 0.6em;">Система комментирования SigComments</a>
+                
             </article>
         </div>
     );
