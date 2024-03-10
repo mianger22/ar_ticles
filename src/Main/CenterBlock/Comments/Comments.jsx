@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Comment from "./Comment";
 import axios from "axios";
 
-const url_resourse = "http://localhost:80/comments";
+const url_resourse = "http://84.38.182.132:80/comments";
 
 function Comments() {
     const [comments_list, set_comments_list] = useState([]);
@@ -153,7 +153,7 @@ function Comments() {
                             </div>
                         </fieldset>
 
-                        <button class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom">Ответить</button>
+                        <button class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom">Спросить</button>
                     </Form>
                 )}
             </Formik>         
